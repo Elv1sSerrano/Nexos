@@ -10,8 +10,8 @@ const SuperQuality = () => {
             </div>
             <div>
                 <div className="flex justify-start">
-                    <h2 className="text-purple-700 font-bold font-palanquin w-[600px] 
-                    text-4xl text-wrap">Conecta con profesores, estudiantes, proyectos y más</h2>
+                    <h2 className="text-purple-700 font-bold font-palanquin 
+                    text-4xl max-lg:text-[40px] max-lg:leading-tight md:w-[700px]">Conecta con profesores, estudiantes, proyectos y más</h2>
                 </div>                
                 <div className="mt-10 flex flex-col gap-6">
                     {

@@ -7,11 +7,11 @@ const App = () => (
     <section className="xl:padding-l wide:padding-r padding-b">
       <Hero />
     </section>
-    <section className="padding bg-purple-100">
-      <PopularProducts />
-    </section>
-    <section className="padding">
+    <section className="px-8 pt-4 max-lg:py-24 bg-items bg-no-repeat max-lg:bg-repeat max-lg:bg-contain bg-cover">
       <SuperQuality />
+    </section>
+    <section className="padding bg-lines bg-no-repeat bg-cover bg-right">
+      <PopularProducts />
     </section>
     <section className="padding-x py-10">
       <Services />

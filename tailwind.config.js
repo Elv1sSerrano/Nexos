@@ -34,6 +34,9 @@ export default {
       backgroundImage: {
         'hero': "url('assets/images/collection-background.svg')",
         'card': "url('assets/images/thumbnail-background.svg')",
+        'items': "url('assets/images/bg/scattered-forcefields.svg')",
+        'lines': "url('assets/images/bg/sun-tornado.svg')",
+        'pinkToPurple': "url('assets/images/bg/Purplin.jpg')",
       },
       screens: {
         "wide": "1440px"
