@@ -1,14 +1,28 @@
 import { student } from "../assets/images"
+import { steps } from "../constants"
+import Tabs from "../components/Tab"
 
 const SuperQuality = () => {
     return (
         <section className="flex flex-row justify-around items-center">
-            <div>
+            <div className="max-lg:hidden">
                 <img src={student} alt="student" width={400} className=""/>
             </div>
             <div>
-                <h2 className="text-purple-700 w-30 font-bold font-palanquin w-[600px] text-[40px]">Conecta con profesores, estudiantes, proyectos y más</h2>
-                <p></p>
+                <div className="flex justify-start">
+                    <h2 className="text-purple-700 font-bold font-palanquin w-[600px] 
+                    text-4xl text-wrap">Conecta con profesores, estudiantes, proyectos y más</h2>
+                </div>                
+                <div className="mt-10 flex flex-col gap-6">
+                    {
+                        steps.map((tab) => (
+                            <Tabs
+                            key={tab.title}
+                            {...tab}
+                            />
+                        ))
+                    }
+                </div>                
             </div>
         </section>
     )

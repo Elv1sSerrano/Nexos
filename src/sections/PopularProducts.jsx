@@ -4,7 +4,7 @@ import ToolCard from "../components/ToolCard"
 const PopularProducts = () => {
     return (
         <section id="herramientas"
-        className="max-container max-sm:mt-12 ">
+        className="max-container max-sm:mt-12">
             <div className="flex flex-col justify-start gap-5">
                 <h2 className="text-4xl font-palanquin font-bold">Aprende todos los días</h2>
                 <p className="lg:max-w-lg mt-2 font-montserrat text-slate-gray">Usa las herramientas a disposición de la plataforma para facilitar tu proceso de aprendizaje
