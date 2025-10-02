@@ -1,8 +1,8 @@
-import { CustomerReviews, Footer, Hero, FrequentlyAsked, SpecialOffers, Subscribe, Initiation, ToolsS } from "./sections";
+import { Footer, Hero, FrequentlyAsked, Subscribe, Initiation, ToolsS } from "./sections";
 import Nav from "./components/Nav";
 
 const App = () => (
-  <main className="relative">
+  <main className="relative bg-[#FAF7F3]">
     <Nav />
     <section className="xl:padding-l wide:padding-r padding-b">
       <Hero />
@@ -16,16 +16,10 @@ const App = () => (
     <section className="padding-x py-10">
       <FrequentlyAsked />
     </section>
-    <section className="padding">
-      <SpecialOffers />
-    </section>
-    <section className="padding bg-pale-blue">
-      <CustomerReviews />
-    </section>
     <section className="padding-x sm:py-32 py-16 w-full">
       <Subscribe />
     </section>
-    <section className="bg-black padding-x padding-t pb-8">
+    <section>
       <Footer />
     </section>
   </main>
