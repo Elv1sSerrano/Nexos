@@ -2,7 +2,7 @@ import { student } from "../assets/images"
 import { steps } from "../constants"
 import Tabs from "../components/Tab"
 
-const SuperQuality = () => {
+const Initiation = () => {
     return (
         <section className="flex flex-row justify-around items-center">
             <div className="max-lg:hidden">
@@ -28,4 +28,4 @@ const SuperQuality = () => {
     )
 }
 
-export default SuperQuality
+export default Initiation

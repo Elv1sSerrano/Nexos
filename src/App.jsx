@@ -1,4 +1,4 @@
-import { CustomerReviews, Footer, Hero, PopularProducts, Services, SpecialOffers, Subscribe, SuperQuality } from "./sections";
+import { CustomerReviews, Footer, Hero, FrequentlyAsked, SpecialOffers, Subscribe, Initiation, ToolsS } from "./sections";
 import Nav from "./components/Nav";
 
 const App = () => (
@@ -8,13 +8,13 @@ const App = () => (
       <Hero />
     </section>
     <section className="px-8 pt-4 max-lg:py-24 bg-items bg-no-repeat max-lg:bg-repeat max-lg:bg-contain bg-cover">
-      <SuperQuality />
+      <Initiation />
     </section>
     <section className="padding bg-lines bg-no-repeat bg-cover bg-right">
-      <PopularProducts />
+      <ToolsS />
     </section>
     <section className="padding-x py-10">
-      <Services />
+      <FrequentlyAsked />
     </section>
     <section className="padding">
       <SpecialOffers />

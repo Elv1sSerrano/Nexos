@@ -1,7 +1,7 @@
 import { tools } from "../constants"
 import ToolCard from "../components/ToolCard"
 
-const PopularProducts = () => {
+const ToolsS = () => {
     return (
         <section id="herramientas"
         className="max-container max-sm:mt-12">
@@ -26,4 +26,4 @@ const PopularProducts = () => {
     )
 }
 
-export default PopularProducts
+export default ToolsS
