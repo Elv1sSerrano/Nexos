@@ -1,4 +1,4 @@
-import { Footer, Hero, FrequentlyAsked, Subscribe, Initiation, ToolsS } from "./sections";
+import { Footer, Hero, FrequentlyAsked, Subscribe, Initiation, ToolsS, AdditionalInfo } from "./sections";
 import Nav from "./components/Nav";
 
 const App = () => (
@@ -6,6 +6,9 @@ const App = () => (
     <Nav />
     <section className="xl:padding-l wide:padding-r padding-b">
       <Hero />
+    </section>
+    <section>
+      <AdditionalInfo />
     </section>
     <section className="px-8 pt-4 max-lg:py-24 bg-items bg-no-repeat max-lg:bg-repeat max-lg:bg-contain bg-cover">
       <Initiation />

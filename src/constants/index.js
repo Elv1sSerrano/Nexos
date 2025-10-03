@@ -8,10 +8,10 @@ export const navLinks = [
 ]
 
 export const tools = [
-    {imgURL: forums, name: "Foros", description: "Join our community forums to discuss, share, and connect with fellow enthusiasts."},
-    {imgURL: blogs, name: "Blogs", description: "Read our latest blogs for insights, tips, and stories from industry experts."},
-    {imgURL: tutorials, name: "Tutoriales", description: "Explore step-by-step tutorials to enhance your skills and knowledge."},
-    {imgURL: ebooks, name: "ebooks", description: "Download free ebooks on various topics to deepen your understanding and expertise."}
+    {imgURL: forums, name: "Foros", description: "Participa en discusiones y comparte tus ideas con otros miembros de la red."},
+    {imgURL: blogs, name: "Blogs", description: "Escribe y comparte tus experiencias y conocimientos con la comunidad."},
+    {imgURL: tutorials, name: "Tutoriales", description: "Accede a una variedad de cursos en línea para mejorar tus habilidades."},
+    {imgURL: ebooks, name: "ebooks", description: "Descarga libros electrónicos sobre temas relacionados con tus intereses."}
 ]
 
 export const steps = [

@@ -4,6 +4,7 @@ import ToolsS from "./Tools";
 import FrequentlyAsked from "./FrequentlyAsked";
 import Subscribe from "./Subscribe";
 import Initiation from "./Initiation";
+import AdditionalInfo from "./AdditionalInfo";
 
 export {
   Footer,
@@ -11,5 +12,6 @@ export {
   ToolsS,
   FrequentlyAsked,
   Subscribe,
-  Initiation
+  Initiation,
+  AdditionalInfo
 };
