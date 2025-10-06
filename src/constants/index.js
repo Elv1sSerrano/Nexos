@@ -1,10 +1,9 @@
 import { forums, blogs, tutorials, ebooks, user, education, newspaper } from "../assets/icon"
 
 export const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About Us" },    
+    { href: "#home", label: "Inicio" },    
     { href: "#herramientas", label: "Herramientas" },
-    { href: "#contact-us", label: "Contact Us" },
+    { href: "#faqs", label: "Preguntas Frecuentes" },
 ]
 
 export const tools = [
