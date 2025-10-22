@@ -1,6 +1,6 @@
-import { logoNexos, textLogoNexos } from '../assets/images';
-import { menu } from '../assets/icon';
-import { navLinks } from '../constants';
+import { logoNexos, textLogoNexos } from '../../../assets/images';
+import { menu } from '../../../assets/icon';
+import { navLinks } from '../../../constants';
 
 const Nav = () => {
   return (

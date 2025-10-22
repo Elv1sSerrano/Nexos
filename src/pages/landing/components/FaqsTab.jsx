@@ -1,4 +1,4 @@
-import { plus, x, circle } from "../assets/icon"
+import { plus, x, circle } from "../../../assets/icon"
 
 const FaqsTab = ({index, activeIndex, setActiveIndex, question, answer}) => {
     const isActive = index === activeIndex;

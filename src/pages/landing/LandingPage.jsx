@@ -1,5 +1,5 @@
 import { Footer, Hero, FrequentlyAsked, Subscribe, Initiation, ToolsS, AdditionalInfo } from "./sections";
-import Nav from "../../components/Nav";
+import Nav from "./components/Nav";
 
 function LandingPage() {
   return (

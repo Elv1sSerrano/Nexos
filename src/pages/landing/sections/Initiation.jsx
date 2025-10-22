@@ -1,6 +1,6 @@
 import { student } from "../../../assets/images"
 import { steps } from "../../../constants"
-import Tabs from "../../../components/Tab"
+import Tabs from "../components/Tab"
 
 const Initiation = () => {
     return (

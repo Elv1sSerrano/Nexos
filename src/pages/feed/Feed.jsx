@@ -1,6 +1,10 @@
+import NavBar from "../../components/NavBar";
+
 function Feed () {
   return (
-    <div>Feed</div>
+    <main>
+      <NavBar />
+    </main>
   );
 }
 
