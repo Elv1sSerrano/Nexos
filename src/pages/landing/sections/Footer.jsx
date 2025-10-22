@@ -1,4 +1,4 @@
-import { logoNexos, textLogoNexos } from "../assets/images"
+import { logoNexos, textLogoNexos } from "../../../assets/images"
 
 const Footer = () => {
   return (    

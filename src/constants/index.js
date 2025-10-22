@@ -20,9 +20,32 @@ export const steps = [
 ]
 
 export const faqs = [
-    {question: "¿Cómo puedo registrarme en la plataforma?", answer: "Para registrarte, haz clic en el botón de 'Sign Up' en la esquina superior derecha y completa el formulario con tu información."},
-    {question: "¿Qué tipo de contenido puedo encontrar en la plataforma?", answer: "Nuestra plataforma ofrece una variedad de contenido, incluyendo foros, blogs, tutoriales y ebooks sobre diversos temas."},
-    {question: "¿Es gratis unirse a la comunidad?", answer: "Sí, unirse a nuestra comunidad es completamente gratis. Puedes acceder a muchos recursos sin costo alguno."},
-    {question: "¿Cómo puedo contribuir con contenido?", answer: "Puedes contribuir escribiendo blogs, participando en foros o creando tutoriales. Simplemente inicia sesión y utiliza las herramientas disponibles para compartir tu conocimiento."},
-    {question: "¿Puedo contactar a otros miembros de la comunidad?", answer: "Sí, puedes enviar mensajes directos a otros miembros y participar en discusiones en los foros."},
-]
+  {
+    question: "¿Qué es Nexos y cuál es su propósito?",
+    answer: "Nexos es una red social de aprendizaje diseñada para conectar semilleros de investigación, docentes y estudiantes en un mismo entorno digital. Su propósito es fomentar la colaboración, visibilizar proyectos académicos y facilitar el acceso a contenido educativo verificado."
+  },
+  {
+    question: "¿Quiénes pueden unirse a la plataforma?",
+    answer: "En esta primera fase, Nexos está dirigida a los semilleros de investigación y sus participantes. En futuras versiones, se abrirá a toda la comunidad académica interesada en compartir y adquirir conocimiento."
+  },
+  {
+    question: "¿Qué tipo de contenido puedo encontrar en Nexos?",
+    answer: "Los usuarios pueden acceder a cursos, foros temáticos, blogs académicos y una biblioteca digital de ebooks. Todo el contenido proviene de fuentes verificadas y de la comunidad educativa, garantizando su calidad y pertinencia."
+  },
+  {
+    question: "¿Cómo puedo publicar contenido o mostrar el trabajo de mi semillero?",
+    answer: "Los miembros autorizados de los semilleros pueden crear publicaciones, compartir avances de proyectos, participar en debates y subir materiales académicos desde su perfil dentro de la plataforma."
+  },
+  {
+    question: "Nexos tiene algún costo para los usuarios?",
+    answer: "No. Durante esta fase de implementación, Virtus es completamente gratuita para todos los semilleros y participantes."
+  },
+  {
+    question: "¿Qué diferencia a Nexos de otras plataformas educativas?",
+    answer: "A diferencia de otras plataformas, Nexos integra la dinámica social propia de las redes con el rigor académico, promoviendo la interacción entre pares, la difusión de proyectos con impacto social y la construcción colectiva de conocimiento."
+  },
+  {
+    question: "¿Cómo garantiza Nexos la calidad del contenido compartido?",
+    answer: "El contenido proviene de semilleros y docentes vinculados a instituciones académicas, y pasa por una verificación interna antes de ser publicado. Esto asegura que la información compartida sea confiable y de valor educativo."
+  }
+];

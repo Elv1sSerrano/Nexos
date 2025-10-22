@@ -1,5 +1,5 @@
-import { tools } from "../constants"
-import ToolCard from "../components/ToolCard"
+import { tools } from "../../../constants"
+import ToolCard from "../../../components/ToolCard"
 
 const ToolsS = () => {
     return (

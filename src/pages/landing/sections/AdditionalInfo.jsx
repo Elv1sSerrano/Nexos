@@ -1,4 +1,4 @@
-import { diversity, experience, videocall, ww } from "../assets/images"
+import { diversity, experience, videocall, ww } from "../../../assets/images"
 
 const AdditionalInfo = () => {
     return (
