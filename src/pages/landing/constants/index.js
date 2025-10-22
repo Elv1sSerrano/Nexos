@@ -1,4 +1,4 @@
-import { forums, blogs, tutorials, ebooks, user, education, newspaper } from "../assets/icon"
+import { forums, blogs, tutorials, ebooks, user, education, newspaper } from "../../../assets/icon"
 
 export const navLinks = [
     { href: "#home", label: "Inicio" },    

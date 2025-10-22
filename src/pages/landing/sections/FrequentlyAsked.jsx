@@ -1,4 +1,4 @@
-import { faqs } from "../../../constants"
+import { faqs } from "../constants"
 import FaqsTab from "../components/FaqsTab"
 import { useState } from "react"
 

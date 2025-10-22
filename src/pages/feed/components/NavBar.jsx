@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { logoNexos, textLogoNexos } from "../assets/images";
-import { connections, exit, messages, notifications, search } from "../assets/icon";
+import { logoNexos, textLogoNexos } from "../../../assets/images";
+import { connections, exit, messages, notifications } from "../../../assets/icon";
+import Icon from "../../../components/Icon";
+import { SearchPath } from "../../../constants/iconPaths";
 
 
 function NavBar () {
@@ -16,8 +18,8 @@ function NavBar () {
       </NavLink>      
       {/* Barra de búsqueda */}
       <div className="relative flex flex-row justify-center">
-        <button className="absolute left-2 top-3.5"><img src={search}/></button>
-        <input type="text" name="text" placeholder="Buscar" className="border rounded-full p-3 w-[470px] max-sm:w-full outline-none placeholder:font-montserrat placeholder:pl-6"/>
+        <button className="absolute left-4 top-3.5"><Icon className="text-[#171616ff] hover:text-purple-500" paths={SearchPath}/></button>
+        <input type="text" name="text" placeholder="Buscar" className="pl-12 border rounded-full p-3 w-[470px] max-sm:w-full outline-none placeholder:font-montserrat"/>
       </div>      
       {/* Iconos finales */}
       <div className="flex flex-row justify-around gap-6">
