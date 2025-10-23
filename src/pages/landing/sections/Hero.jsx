@@ -15,7 +15,7 @@ const Hero = () => {
                 </h1>
                 <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">Descubre, comparte y colabora en proyectos de investigación que están transformando el futuro.
                 </p>
-                <NavLink to="/feed">
+                <NavLink to="/app/inicio">
                     <Button  label="Recorre la plataforma" iconURL={arrowRight}/>    
                 </NavLink>                
             </div>
