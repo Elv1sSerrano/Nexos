@@ -1,3 +1,6 @@
+import Icon from '../../../components/Icon'
+import { commentPath, likePath, savedPath, sendPath } from '../../../constants/iconPaths'
+
 function Post ({profilePicture, author, date, body, image}) {
   return (
     <div className="border-2 rounded-lg w-[600px]">
@@ -10,6 +13,23 @@ function Post ({profilePicture, author, date, body, image}) {
       </div>
       <p className="p-3.5 text-sm">{body}</p>
       <img className="" src={image} alt="" />
+      <div className='flex flex-row p-4 justify-around'>
+        <button className='flex flex-row gap-1'>
+          <Icon paths={likePath}/>
+          <p>Me gusta</p>
+        </button>
+        <button className='flex flex-row gap-1'>
+          <Icon paths={commentPath}/>
+          <p>Comentar</p>
+        </button>        
+        <button className='flex flex-row gap-1'>
+          <Icon paths={sendPath}/>
+          <p>Enviar</p>
+        </button>                                    
+        <button>
+          <Icon paths={savedPath}/>
+        </button>        
+      </div>
     </div>
   )
 }
