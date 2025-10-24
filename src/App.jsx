@@ -4,6 +4,10 @@ import NavBar from "./pages/layout/components/NavBar";
 import SideBar from './pages/layout/components/SideBar'
 import Feed from "./pages/feed/Feed";
 import Settings from "./pages/settings/Settings";
+import Explore from "./pages/explore/Explore";
+import Profile from "./pages/profile/Profile";
+import Saved from "./pages/saved/Saved";
+import Communitie from "./pages/communities/Communitie";
 
 function AppLayout () {
   return (
@@ -27,7 +31,11 @@ function App () {
 
         <Route path='/app' element={<AppLayout />}>
           <Route path="inicio" element={<Feed />}/>
+          <Route path="explorar" element={<Explore />}/>
+          <Route path="perfil" element={<Profile />}/>
+          <Route path="guardados" element={<Saved />}/>
           <Route path="ajustes" element={<Settings />}/>
+          <Route path="virtual aprende" element={<Communitie />}/>
         </Route>
       </Routes>
     </BrowserRouter>

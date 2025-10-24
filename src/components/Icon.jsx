@@ -1,6 +1,6 @@
 function Icon ({ className, paths }) {
   if (!paths || paths.length === 0) {
-    return null; // No renderizar si no hay paths
+    return null; 
   }
 
   return (

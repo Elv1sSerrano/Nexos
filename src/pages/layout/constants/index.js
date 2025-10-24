@@ -3,7 +3,7 @@ import { homePath, profilePath, savedPath, settingsPath, trendPath } from "../..
 
 export const sideBarItems = [
   {icon: homePath, label: "Inicio"},
-  {icon: trendPath, label: "Popular"},  
+  {icon: trendPath, label: "Explorar"},  
   {icon: profilePath, label: "Perfil"},  
   {icon: savedPath, label: "Guardados"},  
   {icon: settingsPath, label: "Ajustes"},  
