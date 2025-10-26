@@ -1,17 +1,30 @@
 import logoNexos from './logoNexos.png';
 import textLogoNexos from './textLogoNexos.png';
-import heroImage from './hero-image.png'
-import student from './student.png';
-import videocall from './videollamada.png';
-import experience from './experience.png';
-import diversity from './diversity.png';
-import ww from './ww.png';
-import logoEtitc from './logoEtitc.jpg'
-import logoVirtualAprende from './logoVirtualAprende.png'
-import novedad1 from './novedad1.png'
-import novedad2 from './novedad2.png'
-import novedad3 from './novedad3.png'
-import publicacion1 from './publicacion1.jpg'
+
+//Imágenes landing
+import heroImage from './landing/hero-image.png'
+import student from './landing/student.png';
+import videocall from './landing/videollamada.png';
+import experience from './landing/experience.png';
+import diversity from './landing/diversity.png';
+import ww from './landing/ww.png';
+
+//Imágenes de perfil
+import logoEtitc from './profile/logoEtitc.jpg'
+import logoVirtualAprende from './profile/logoVirtualAprende.png'
+import logoUD from './profile/logoUD.jpg'
+
+//Imágenes de stories
+import novedad1 from './stories/novedad1.png'
+import novedad2 from './stories/novedad2.png'
+import novedad3 from './stories/novedad3.png'
+
+//Imágenes de banners
+import bannerVirtualAprende from './banners/bannerVirtualAprende.png'
+
+//Imágenes de publicaciones
+import publicacion1 from './posts/publicacion1.jpg'
+
 
 export { logoNexos, textLogoNexos, heroImage, student, videocall, experience, diversity, ww, logoEtitc, logoVirtualAprende,
-  novedad1, novedad2, novedad3, publicacion1 };
+  novedad1, novedad2, novedad3, publicacion1, bannerVirtualAprende, logoUD };

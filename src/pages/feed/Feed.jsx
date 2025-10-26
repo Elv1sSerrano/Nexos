@@ -3,7 +3,7 @@ import Icon from "../../components/Icon";
 import { configurationPath } from "../../constants/iconPaths";
 import { newsCards, posts } from "./constants";
 import NewsCard from "./components/NewsCard";
-import Post from "./components/Post";
+import Post from "../../components/Post";
 
 function Feed () {
   return (

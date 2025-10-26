@@ -1,5 +1,5 @@
-import Icon from '../../../components/Icon'
-import { commentPath, likePath, savedPath, sendPath } from '../../../constants/iconPaths'
+import Icon from './Icon'
+import { commentPath, likePath, savedPath, sendPath } from '../constants/iconPaths'
 
 function Post ({profilePicture, author, date, body, image}) {
   return (

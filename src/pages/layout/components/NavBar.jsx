@@ -7,7 +7,7 @@ import { SearchPath } from "../../../constants/iconPaths";
 
 function NavBar () {
   return (
-    <header className='padding-x py-5 w-full fixed z-10 bg-[#9929EA]'>
+    <header className='padding-x py-5 w-full fixed z-30 bg-[#9929EA]'>
       <nav className='flex justify-between items-center max-container'>
       {/* Imágenes del lado izquierdo */}
       <NavLink to="/feed">
