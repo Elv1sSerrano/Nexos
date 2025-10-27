@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { bannerVirtualAprende, logoVirtualAprende } from "../../assets/images";
 import Tab from "../../components/ui/Tab";
-import { tabs, virtualAprendeNexos } from "./constants";
+import { tabs, virtualAprendeNexos, virtualAprendeParticipants } from "./constants";
 import Account from "../../components/ui/Account";
 
 function Communitie () {
@@ -31,11 +31,11 @@ function Communitie () {
               ))
             }
           </ul>
-          <div className="flex flex-col items-center ml-[-288px]">            
+          <div className="ml-[-288px]">            
             <Outlet />
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-5">
           <div className="mt-10">
             <h3 className="font-semibold text-xl mb-3">Nexos</h3>
             <div className="flex flex-col gap-2">
@@ -46,9 +46,9 @@ function Communitie () {
           </div>
           <div>
             <h3 className="font-semibold text-xl mb-3">Miembros</h3>
-            <div className="flex flex-col gap-2">
-              {virtualAprendeNexos.map((nexo) => (
-                <Account key={nexo.label} label={nexo.label} image={nexo.image} />
+            <div className="flex flex-col gap-5">
+              {virtualAprendeParticipants.map((participant) => (
+                <Account key={participant.id} label={participant.name} image={participant.Picture} />
               ))}
             </div>
           </div>

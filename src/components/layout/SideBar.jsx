@@ -39,7 +39,7 @@ function SideBar () {
           ))
         }
       </div>
-      <hr class="border-t-2 border-gray-300 w-full my-4" />   
+      <hr className="border-t-2 border-gray-300 w-full my-4" />   
       <div className="flex flex-row items-center gap-4 mb-3">
         <h2 className="text-[#303538] font-semibold font-montserrat">Comunidades</h2>  
         <button><Icon className="text-[#303538] w-5 h-5" paths={configurationPath}/></button>

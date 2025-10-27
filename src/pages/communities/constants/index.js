@@ -1,3 +1,4 @@
+import { faker } from "@faker-js/faker";
 import { logoVirtualAprende, logoEtitc, publicacion1, logoUD } from "../../../assets/images";
 
 export const tabs = [
@@ -16,4 +17,25 @@ export const virtualAprendePosts = [
 export const virtualAprendeNexos = [
   {image: logoEtitc, label: "ETITC"},  
   {image: logoUD, label: "Universidad Distrital"},  
+]
+
+export const virtualAprendeParticipants = []
+
+for (let i = 0 ; i < 7; i++) {
+  virtualAprendeParticipants.push({
+    id: String(i+1) , Picture: faker.image.personPortrait() , name: faker.person.fullName()
+  }) 
+}
+
+export const participantsNexos = []
+
+for (let i = 0 ; i < 2; i++) {
+  participantsNexos.push({
+    id: String(i+1) , picture: faker.image.personPortrait() , name: faker.person.fullName()
+  }) 
+}
+
+
+export const projects = [
+  {projectName: "Nexos", background: "#B7A3E3", date: "Abril 24, 2025", projectType: "Desarrollo", projectPercentage:30, projectProgressColor: "#9000ff", participants: participantsNexos}
 ]

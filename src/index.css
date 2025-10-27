@@ -57,3 +57,52 @@
     @apply font-montserrat text-slate-gray text-lg leading-7; 
   }
 }
+
+/* 1. CLASE BASE: Resetear la apariencia predeterminada */
+.custom-range {
+  -webkit-appearance: none; /* Chrome, Safari, Edge, Opera */
+  -moz-appearance: none;    /* Firefox */
+  appearance: none;
+  width: 100%;
+  background: transparent; /* Hace que el background del input sea transparente */
+  cursor: none;
+  --progress-value: 50%; /* Esta variable será actualizada por JS/React */
+  --progress-color: #9000ff;
+
+  background: linear-gradient(
+      to right, 
+      var(--progress-color) 0%, 
+      var(--progress-color) var(--progress-value), 
+      #e5e7eb var(--progress-value), 
+      #e5e7eb 100%
+  );
+  
+}
+
+/* 2. ESTILOS PARA EL PULGAR (THUMB) */
+
+/* WebKit (Chrome, Safari, Edge) */
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+/* Mozilla (Firefox) */
+.custom-range::-moz-range-thumb {
+    border: none;
+}
+
+/* 3. ESTILOS PARA LA PISTA (TRACK) */
+
+/* WebKit (Chrome, Safari, Edge) */
+.custom-range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 20px;    
+    border-radius: 4px;
+}
+
+/* Mozilla (Firefox) */
+.custom-range::-moz-range-track {
+    width: 100%;
+    height: 20px;    
+    border-radius: 4px;
+}
