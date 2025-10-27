@@ -1,4 +1,4 @@
-import Icon from "../../../components/Icon";
+import Icon from "../../../components/ui/Icon";
 import { rightArrowPath } from "../../../constants/iconPaths";
 
 function Card ({title, field, value}) {

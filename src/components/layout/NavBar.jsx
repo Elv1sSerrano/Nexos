@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { logoNexos, textLogoNexos } from "../../../assets/images";
-import { connections, exit, messages, notifications } from "../../../assets/icon";
-import Icon from "../../../components/Icon";
-import { SearchPath } from "../../../constants/iconPaths";
+import { logoNexos, textLogoNexos } from "../../assets/images";
+import { connections, exit, messages, notifications } from "../../assets/icon";
+import Icon from "../ui/Icon";
+import { SearchPath } from "../../constants/iconPaths";
 
 
 function NavBar () {

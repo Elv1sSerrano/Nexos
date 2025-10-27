@@ -1,4 +1,4 @@
-import Button from "../../../components/Button.jsx"
+import Button from "../../../components/ui/Button.jsx"
 import { arrowRight } from "../../../assets/icon/index.js"
 import { heroImage } from "../../../assets/images/index.js";
 import { NavLink } from "react-router-dom";

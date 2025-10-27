@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
-import Icon from "../../../components/Icon";
-import { sideBarItems, sideBarCommunities } from "../constants";
-import { configurationPath } from "../../../constants/iconPaths";
+import Icon from "../ui/Icon";
+import { sideBarItems, sideBarCommunities } from "./constants";
+import { configurationPath } from "../../constants/iconPaths";
+import Account from "../ui/Account";
 
 function SideBar () {
   return (
@@ -46,10 +47,7 @@ function SideBar () {
       <div className="flex flex-col gap-4">
         {
           sideBarCommunities.map((communitie) => (
-            <NavLink to={`/app/${communitie.label.toLowerCase()}`} className="flex items-center space-x-3">
-              <img src={communitie.image} className="w-8 object-cover rounded-full"/>
-              <p className="flex-grow min-w-0 truncate">{communitie.label}</p>
-            </NavLink>
+            <Account key={communitie.label} label={communitie.label} image={communitie.image} />
           ))
         }
       </div>

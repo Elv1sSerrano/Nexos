@@ -1,5 +1,5 @@
 import { tabs } from "./constants"
-import Tab from "../../components/Tab";
+import Tab from "../../components/ui/Tab";
 import { Outlet } from "react-router-dom";
 
 function Settings () {

@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-import Icon from "../../components/Icon";
+import Icon from "../../components/ui/Icon";
 import { configurationPath } from "../../constants/iconPaths";
 import { newsCards, posts } from "./constants";
 import NewsCard from "./components/NewsCard";
-import Post from "../../components/Post";
+import Post from "../../components/ui/Post";
 
 function Feed () {
   return (
