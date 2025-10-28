@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import { logoVirtualAprende, logoEtitc, publicacion1, logoUD } from "../../../assets/images";
+import { logoVirtualAprende, logoEtitc, publicacion1, logoUD, bannercursoVideo } from "../../../assets/images";
 
 export const tabs = [
   {name: "Principal"},
@@ -37,5 +37,9 @@ for (let i = 0 ; i < 2; i++) {
 
 
 export const projects = [
-  {projectName: "Nexos", background: "#B7A3E3", date: "Abril 24, 2025", projectType: "Desarrollo", projectPercentage:30, projectProgressColor: "#9000ff", participants: participantsNexos}
+  {projectName: "Nexos", background: "#B7A3E3", date: "Abril 24, 2025", projectDescription: "Red de comunicación de semilleros enfocada a proporcionar un entorno donde se pueda divulgar información relacionada con proyectos de investigación.", projectPercentage:30, projectProgressColor: "#9000ff", participants: participantsNexos}  
+]
+
+export const virtualAprendeCourses = [
+  {link: "http://pedagogiavirtual.com/renlacedigital/form/cursos-virtuales", image: bannercursoVideo, title: "Curso de creación de videos", description: "En este curso aprenderás a crear videos increibles dominando la grabación, edición, efectos y más", author: "Yeison Mora", date: "Abril de 2024", recomendations: 20}
 ]

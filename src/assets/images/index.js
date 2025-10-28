@@ -25,6 +25,9 @@ import bannerVirtualAprende from './banners/bannerVirtualAprende.png'
 //Imágenes de publicaciones
 import publicacion1 from './posts/publicacion1.jpg'
 
+//Imágenes de cursos
+import bannercursoVideo from './courses/bannercursoVideo.jpg'
+
 
 export { logoNexos, textLogoNexos, heroImage, student, videocall, experience, diversity, ww, logoEtitc, logoVirtualAprende,
-  novedad1, novedad2, novedad3, publicacion1, bannerVirtualAprende, logoUD };
+  novedad1, novedad2, novedad3, publicacion1, bannerVirtualAprende, logoUD, bannercursoVideo };

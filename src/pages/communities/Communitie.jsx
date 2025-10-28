@@ -22,7 +22,7 @@ function Communitie () {
               <button className="border-2 px-4 py-[7px] rounded-md border-gray-700 text-gray-700">Mensaje</button>
             </div>          
           </div>
-          <p className="mt-2">El Grupo de investigación interinstitucional en ambientes virtuales de aprendizaje "Virtus" es una organización avalada por ... ver más</p>
+          <p className="mt-2 opacity-90">El Grupo de investigación interinstitucional en ambientes virtuales de aprendizaje "Virtus" es una organización avalada por ... ver más</p>
           <hr class="border-t-2 border-gray-300 w-full my-4" />
           <ul className="flex flex-row justify-between my-6">
             {

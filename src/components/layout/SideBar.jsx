@@ -9,7 +9,7 @@ function SideBar () {
     <aside className="fixed top-28 left-8 w-52">
       <div className="flex flex-col gap-4"> 
         {sideBarItems.map((item) => (
-          <NavLink key={item.label} to={`/app/${item.label.toLowerCase()}`}            
+          <NavLink key={item.label} to={`/app/${item.direction}`}            
             className={({ isActive }) => 
               `flex items-center space-x-3 p-2 transition-colors duration-200 ${
                 isActive 
@@ -47,7 +47,7 @@ function SideBar () {
       <div className="flex flex-col gap-4">
         {
           sideBarCommunities.map((communitie) => (
-            <Account key={communitie.label} label={communitie.label} image={communitie.image} />
+            <Account key={communitie.label} label={communitie.label} direction={communitie.direction} image={communitie.image} />
           ))
         }
       </div>

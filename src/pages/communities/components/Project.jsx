@@ -1,11 +1,9 @@
-function Project ({ background, date, projectName, projectType, projectPercentage, participants, projectProgressColor }) {
+function Project ({ background, date, projectName, projectDescription, projectPercentage, participants, projectProgressColor }) {
   return (
-    <div className={`rounded-md max-w-96 p-2 shadow-md`} style={{backgroundColor : background}}>      
-      <p className="text-slate-gray text-sm">{date}</p>
-      <div className="flex flex-col items-center justify-center mt-1">
-        <h3 className="font-bold text-lg">{projectName}</h3>
-        <p className="text-base">{projectType}</p>
-      </div>
+    <div className={`rounded-3xl max-w-96 p-4 shadow-md`} style={{backgroundColor : background}}>      
+      <p className="text-sm opacity-60">{date}</p>
+      <h3 className="font-bold text-lg text-center mb-4">{projectName}</h3>
+      <p className="text-base opacity-80 mb-5">{projectDescription}</p>
       <div className="flex flex-col mt-1 gap-2">
         <h4 className="text-base font-semibold">Progreso</h4>
         <input 
