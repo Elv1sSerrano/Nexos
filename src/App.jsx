@@ -15,7 +15,7 @@ import Posts from "./pages/communities/sections/Posts";
 import Principal from "./pages/communities/sections/Principal";
 import Courses from "./pages/communities/sections/Courses";
 import Projects from "./pages/communities/sections/Projects";
-import Podcasts from "./pages/communities/sections/Podcasts";
+import Podcasts from "./pages/communities/sections/Videos";
 
 function AppLayout () {
   return (
@@ -53,7 +53,7 @@ function App () {
             <Route path="publicaciones" element={<Posts />}/>
             <Route path="cursos" element={<Courses />}/>
             <Route path="proyectos" element={<Projects />}/>
-            <Route path="podcasts" element={<Podcasts />}/>
+            <Route path="videos" element={<Podcasts />}/>
           </Route>
         </Route>
       </Routes>

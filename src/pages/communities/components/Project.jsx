@@ -7,7 +7,7 @@ function Project ({ background, date, projectName, projectDescription, projectPe
       <div className="flex flex-col mt-1 gap-2">
         <h4 className="text-base font-semibold">Progreso</h4>
         <input 
-        className="custom-range" 
+        className="custom-range rounded-full" 
         style={{ '--progress-value': `${projectPercentage}%`, '--progress-color': `${projectProgressColor}` }} 
         type="range" 
         value={projectPercentage} min={0} max={100}
@@ -15,7 +15,7 @@ function Project ({ background, date, projectName, projectDescription, projectPe
         <p className="font-semibold text-right">{projectPercentage}%</p>
       </div>
       <hr className="border-t-2 border-white w-full my-4" />   
-      <h3 className="mb-2">Participantes</h3>
+      {/* <h3 className="mb-2">Participantes</h3> */}
       <div className="flex flex-row gap-0.5">
         {
           participants.map((participant) => (

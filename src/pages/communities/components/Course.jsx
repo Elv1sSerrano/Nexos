@@ -8,11 +8,11 @@ function Course({ link, image, title, description, author, date, recomendations}
         <div className="flex flex-row gap-3">
           <img className="w-1/2" src={image} alt={title}/>
           <div className="flex flex-col gap-2 justify-center">
-            <a className="hover:underline hover:text-purple-700" href={link} target="_blank">
+            <a className="hover:text-purple-700 transition duration-300" href={link} target="_blank">
               <h1 className="font-bold text-2xl">{title}</h1>
             </a>            
             <p className="opacity-85">{description}</p>
-            <NavLink className={"hover:underline hover:text-purple-500"}>
+            <NavLink className={"hover:text-purple-600 transition-all duration-300"}>
               <p className="opacity-70">{author}</p>
             </NavLink>            
             <p>Publicación: {date}</p>

@@ -6,7 +6,7 @@ import Account from "../../components/ui/Account";
 
 function Communitie () {
   return (
-    <section>
+    <section className="font-inter">
       <div className="h-56 w-full relative z-10">   
         <img src={bannerVirtualAprende}/>     
         <div className="w-48 h-48 absolute bottom-[-150px] left-14 z-20">

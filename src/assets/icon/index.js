@@ -15,6 +15,7 @@ import messages from './messages.svg'
 import notifications from './notifications.svg'
 import exit from './exit.svg'
 import search from './search.svg'
+import progress from './carga.png'
 
 export { menu, arrowRight, forums, blogs, tutorials, ebooks, user, education, newspaper, plus, x, circle, connections, messages,
-  notifications, exit, search };
+  notifications, exit, search, progress};
