@@ -28,9 +28,21 @@ import publicacion1 from './posts/publicacion1.jpg'
 //Imágenes de cursos
 import bannercursoVideo from './courses/bannercursoVideo.jpg'
 
-//Imágenes de podcasts
+//Imágenes de videos
 import miniaturaCurso from './videos/miniaturaCurso.png'
+import miniaturaIndustria4 from './videos/miniaturaIndustria4.png'
+
+//Imágenes de recursos
+import recursoEnlaceDigital from './resources/recursoEnlaceDigital.png'
+import recursoNexos from './resources/recursoNexos.png'
+
+//Imágenes de eventos
+import eventoCongreso from './events/eventoCongreso.jpg'
+import eventoRedColsi from './events/eventoRedColsi.jpeg'
+import eventoRedColsi2 from './events/eventoRedColsi2.jpeg'
+import eventoRedColsi3 from './events/eventoRedColsi3.jpeg'
 
 
 export { logoNexos, textLogoNexos, heroImage, student, videocall, experience, diversity, ww, logoEtitc, logoVirtualAprende,
-  novedad1, novedad2, novedad3, publicacion1, bannerVirtualAprende, logoUD, bannercursoVideo, miniaturaCurso };
+  novedad1, novedad2, novedad3, publicacion1, bannerVirtualAprende, logoUD, bannercursoVideo, miniaturaCurso, miniaturaIndustria4, 
+  recursoEnlaceDigital, recursoNexos, eventoCongreso, eventoRedColsi, eventoRedColsi2, eventoRedColsi3};

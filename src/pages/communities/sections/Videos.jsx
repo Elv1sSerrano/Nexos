@@ -5,7 +5,7 @@ function Videos () {
   return (
     <div className="grid grid-cols-2 gap-4">
       {virtualAprendeVideos.map((video) => (
-        <Video image={video.image} title={video.title} date={video.date} author={video.author} />
+        <Video key={video.title} image={video.image} title={video.title} date={video.date} author={video.author} />
       ))}
     </div>
   )

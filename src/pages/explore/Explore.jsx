@@ -1,6 +1,8 @@
+import EventsSection from "./sections/EventsSection";
+
 function Explore () {
   return (
-    <h1>Explorar</h1>
+    <EventsSection />
   )
 }
 
