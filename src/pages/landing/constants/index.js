@@ -1,4 +1,4 @@
-import { forums, blogs, tutorials, ebooks, user, education, newspaper } from "../../../assets/icon"
+import { forumsPath, blogsPath, tutorialsPath, ebooksPath, userPath, educationPath, newspaperPath } from "../../../constants/iconPaths"
 
 export const navLinks = [
     { href: "#home", label: "Inicio" },    
@@ -7,16 +7,16 @@ export const navLinks = [
 ]
 
 export const tools = [
-    {imgURL: forums, name: "Foros", description: "Participa en discusiones y comparte tus ideas con otros miembros de la red."},
-    {imgURL: blogs, name: "Blogs", description: "Escribe y comparte tus experiencias y conocimientos con la comunidad."},
-    {imgURL: tutorials, name: "Tutoriales", description: "Accede a una variedad de cursos en línea para mejorar tus habilidades."},
-    {imgURL: ebooks, name: "ebooks", description: "Descarga libros electrónicos sobre temas relacionados con tus intereses."}
+    {iconPath: forumsPath, name: "Foros", description: "Participa en discusiones y comparte tus ideas con otros miembros de la red."},
+    {iconPath: blogsPath, name: "Blogs", description: "Escribe y comparte tus experiencias y conocimientos con la comunidad."},
+    {iconPath: tutorialsPath, name: "Tutoriales", description: "Accede a una variedad de cursos en línea para mejorar tus habilidades."},
+    {iconPath: ebooksPath, name: "ebooks", description: "Descarga libros electrónicos sobre temas relacionados con tus intereses."}
 ]
 
 export const steps = [
-    {imgURL: user, title: "Regístrate y inicia", description: "Crea tu cuenta y agrega tu información profesional relevante."},
-    {imgURL: education, title: "Explora la comunidad", description: "Conoce un ecosistema enfatizado al aprendizaje."},
-    {imgURL: newspaper, title: "Mantente informado", description: "Sigue explorando y aprendiendo de grandes profesionales."}
+    {iconPath: userPath, title: "Regístrate y inicia", description: "Crea tu cuenta y agrega tu información profesional relevante."},
+    {iconPath: educationPath, title: "Explora la comunidad", description: "Conoce un ecosistema enfatizado al aprendizaje."},
+    {iconPath: newspaperPath, title: "Mantente informado", description: "Sigue explorando y aprendiendo de grandes profesionales."}
 ]
 
 export const faqs = [

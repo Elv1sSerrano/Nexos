@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { logoNexos, textLogoNexos } from "../../assets/images";
-import { connections, exit, messages, notifications } from "../../assets/icon";
 import Icon from "../ui/Icon";
-import { SearchPath } from "../../constants/iconPaths";
+import { connectionsPath, exitPath, messagesPath, notificationsPath, SearchPath } from "../../constants/iconPaths";
 
 
 function NavBar () {
@@ -22,12 +21,12 @@ function NavBar () {
         <input type="text" name="text" placeholder="Buscar" className="pl-12 border rounded-full p-3 w-[470px] max-sm:w-full outline-none placeholder:font-montserrat"/>
       </div>      
       {/* Iconos finales */}
-      <div className="flex flex-row justify-around gap-6">
-        <img src={connections}/>
-        <img src={messages}/>
-        <img src={notifications}/>
+      <div className="flex flex-row justify-around gap-6">        
+        <Icon paths={connectionsPath} className={"text-white"} />
+        <Icon paths={messagesPath} className={"text-white"}/>
+        <Icon paths={notificationsPath} className={"text-white"}/>
         <NavLink to="/">
-          <img src={exit}/>
+          <Icon paths={exitPath} className={"text-white"}/>          
         </NavLink>        
       </div>
     </nav>

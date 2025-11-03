@@ -41,8 +41,9 @@ import eventoCongreso from './events/eventoCongreso.jpg'
 import eventoRedColsi from './events/eventoRedColsi.jpeg'
 import eventoRedColsi2 from './events/eventoRedColsi2.jpeg'
 import eventoRedColsi3 from './events/eventoRedColsi3.jpeg'
+import expo2024 from './events/expo2025.jpg'
 
 
 export { logoNexos, textLogoNexos, heroImage, student, videocall, experience, diversity, ww, logoEtitc, logoVirtualAprende,
   novedad1, novedad2, novedad3, publicacion1, bannerVirtualAprende, logoUD, bannercursoVideo, miniaturaCurso, miniaturaIndustria4, 
-  recursoEnlaceDigital, recursoNexos, eventoCongreso, eventoRedColsi, eventoRedColsi2, eventoRedColsi3};
+  recursoEnlaceDigital, recursoNexos, eventoCongreso, eventoRedColsi, eventoRedColsi2, eventoRedColsi3, expo2024};

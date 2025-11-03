@@ -1,4 +1,4 @@
-import Carousel from "../components/Carousel"
+import Carousel from "../../../components/ui/Carousel"
 import { virtualAprendeEvents, virtualAprendePosts, virtualAprendeResources, virtualAprendeSummary } from "../constants"
 import Post from "../../../components/ui/Post"
 import Resource from "../components/Resource"

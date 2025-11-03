@@ -1,7 +1,7 @@
 import Button from "../../../components/ui/Button.jsx"
-import { arrowRight } from "../../../assets/icon/index.js"
 import { heroImage } from "../../../assets/images/index.js";
 import { NavLink } from "react-router-dom";
+import { rightArrowPath } from "../../../constants/iconPaths.js";
 
 const Hero = () => {
     return (
@@ -16,7 +16,7 @@ const Hero = () => {
                 <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">Descubre, comparte y colabora en proyectos de investigación que están transformando el futuro.
                 </p>
                 <NavLink to="/app/inicio">
-                    <Button  label="Recorre la plataforma" iconURL={arrowRight}/>    
+                    <Button  label="Recorre la plataforma" iconPath={rightArrowPath}/>    
                 </NavLink>                
             </div>
             <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 max-sm:py-5">

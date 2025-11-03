@@ -1,6 +1,7 @@
 import { logoNexos, textLogoNexos } from '../../../assets/images';
-import { menu } from '../../../assets/icon';
+import { menuPath } from "../../../constants/iconPaths"
 import { navLinks } from '../constants';
+import Icon from '../../../components/ui/Icon';
 
 const Nav = () => {
   return (
@@ -17,8 +18,8 @@ const Nav = () => {
             </li>
           ))}
         </ul>
-        <div>
-          <img src={menu} width={30} className='hidden max-lg:block text-slate-gray'/>
+        <div>          
+          <Icon paths={menuPath} className={"hidden max-lg:block text-slate-gray"} />
         </div>
       </nav>
     </header>

@@ -1,4 +1,5 @@
-import { plus, x, circle } from "../../../assets/icon"
+import { plusPath, xPath, circlePath } from "../../../constants/iconPaths";
+import Icon from "../../../components/ui/Icon";
 
 const FaqsTab = ({index, activeIndex, setActiveIndex, question, answer}) => {
     const isActive = index === activeIndex;
@@ -14,11 +15,11 @@ const FaqsTab = ({index, activeIndex, setActiveIndex, question, answer}) => {
         <div>
             <div onClick={toggleTab}  
             className="flex flex-row gap-6 items-center bg-white-400 border shadow-md rounded-lg 
-            w-[700px] p-4 relative max-md:w-full max-md:gap-2 cursor-pointer">
-                <img src={circle} alt="Circle"/>
+            w-[700px] p-4 relative max-md:w-full max-md:gap-2 cursor-pointer">                
+                <Icon paths={circlePath} />
                 <p className="font-semibold justify-start text-left font-montserrat 
-                text-lg max-md:text-[10px] max-md:max-w-[200px]">{question}</p>
-                <img src={isActive ? x : plus} alt={isActive ? 'Cerrar' : "abrir"} className="absolute right-1"/>
+                text-lg max-md:text-[10px] max-md:max-w-[200px]">{question}</p>                
+                <Icon paths={isActive ? xPath : plusPath} className={"absolute right-1"} />
             </div>
 
             {isActive && (

@@ -13,8 +13,8 @@ function SideBar () {
             className={({ isActive }) => 
               `flex items-center space-x-3 p-2 transition-colors duration-200 ${
                 isActive 
-                  ? 'bg-purple-100 rounded-lg' 
-                  : 'hover:bg-gray-100'
+                  ? 'bg-gray-100 rounded-lg' 
+                  : 'hover:bg-slate-100'
               }`}>          
             {({ isActive }) => (
               <>

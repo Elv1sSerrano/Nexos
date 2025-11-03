@@ -3,7 +3,7 @@ import { commentPath, likePath, savedPath, sendPath } from '../../constants/icon
 
 function Post ({profilePicture, author, date, body, image}) {
   return (
-    <div className="border-2 rounded-lg w-[600px]">
+    <div className="border-2 rounded-lg w-[600px] bg-white-400">
       <div className="p-2 flex flex-row justify-start items-center">
         <img className="w-8 object-cover rounded-full mr-2" src={profilePicture} alt=""/>
         <div className="flex flex-col">

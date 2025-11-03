@@ -1,10 +1,15 @@
 import EventCard from "../components/EventCard";
+import { nextEvents } from "../constants";
 
 function EventsSection () {
   return (
     <div>
-      <h1 className="font-bold text-3xl">Próximos eventos</h1>
-      <EventCard />
+      <h1 className="font-bold text- mb-2 text-2xl">Próximos eventos</h1>
+      <div className="flex flex-row gap-2">
+        {nextEvents.map((event) => (
+          <EventCard key={event.title} {...event}/>
+        ))}
+      </div>
     </div>
   )
 }

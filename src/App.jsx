@@ -19,7 +19,7 @@ import Podcasts from "./pages/communities/sections/Videos";
 
 function AppLayout () {
   return (
-    <>
+    <div className="font-inter bg-[#ececf0]">
       <NavBar />
       <div className="flex pt-24">
         <SideBar />
@@ -27,7 +27,7 @@ function AppLayout () {
           <Outlet />
         </main>
       </div>
-    </>
+    </div>
   );
 }
 

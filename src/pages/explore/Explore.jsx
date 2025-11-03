@@ -2,7 +2,9 @@ import EventsSection from "./sections/EventsSection";
 
 function Explore () {
   return (
-    <EventsSection />
+    <div>
+      <EventsSection />
+    </div>    
   )
 }
 

@@ -1,11 +1,11 @@
 function Resource ({image, title, category, description}) {
   return (
-    <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100 w-[900px]">      
-      <div className="h-48 w-full overflow-hidden">
+    <div>      
+      <div className="overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+          className="h-full w-[350px] object-cover rounded-lg"
         />
       </div>      
       <div className="p-5">        
