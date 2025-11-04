@@ -201,3 +201,24 @@ fill="#9ca3af" viewBox="0 0 24 24" >
 <!--Boxicons v3.0.3 https://boxicons.com | License  https://docs.boxicons.com/free-->
 <path d="M8 6.65v10.69c0 .64.76.99 1.24.56l6.11-5.35c.34-.3.34-.83 0-1.13L9.24 6.07C8.76 5.65 8 5.99 8 6.63Z"></path>
 </svg>
+
+<!-- arrow up right -->
+<svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+fill="#9ca3af" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.3 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="m3,5v6h2v-6h14v14h-6v2h6c1.1,0,2-.9,2-2V5c0-1.1-.9-2-2-2H5c-1.1,0-2,.9-2,2Z"></path><path d="M6.71 18.71 12.21 13.21 15 16 15 9 8 9 10.79 11.79 5.29 17.29 6.71 18.71z"></path>
+</svg>
+
+<!-- calendar -->
+<svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+fill="#9ca3af" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.3 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="m19,4h-2v-2h-2v2h-6v-2h-2v2h-2c-1.1,0-2,.9-2,2v14c0,1.1.9,2,2,2h14c1.1,0,2-.9,2-2V6c0-1.1-.9-2-2-2ZM5,20v-12h14v-2,14s-14,0-14,0Z"></path><path d="M12 13H17V18H12z"></path>
+</svg>
+
+<!-- ubication -->
+<svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+fill="#9ca3af" viewBox="0 0 24 24" >
+<!--Boxicons v3.0.3 https://boxicons.com | License  https://docs.boxicons.com/free-->
+<path d="m6,8.44c-.02,5.1,5.17,9.18,5.39,9.35.18.14.4.21.61.21s.43-.07.61-.21c.22-.17,5.41-4.25,5.39-9.35,0-3.55-2.69-6.44-6-6.44s-6,2.89-6,6.44Zm10,0h0c.01,3.19-2.74,6.08-4,7.24-1.26-1.15-4.01-4.04-4-7.24,0-2.45,1.79-4.44,4-4.44s4,1.99,4,4.44Z"></path><path d="M12 6A2 2 0 1 0 12 10 2 2 0 1 0 12 6z"></path><path d="m18.02,14.73c-.4.64-.84,1.23-1.27,1.76,2.13.48,3.25,1.19,3.25,1.51,0,.51-2.75,2-8,2s-8-1.49-8-2c0-.32,1.12-1.03,3.25-1.51-.43-.53-.86-1.12-1.27-1.76-2.32.64-3.98,1.71-3.98,3.27,0,2.75,5.18,4,10,4s10-1.25,10-4c0-1.56-1.67-2.63-3.98-3.27Z"></path>
+</svg>

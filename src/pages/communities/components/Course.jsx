@@ -4,7 +4,7 @@ import { heartPath } from "../../../constants/iconPaths";
 
 function Course({ link, image, title, description, author, date, recomendations}) {
   return (
-    <div className="p-4 border-2">      
+    <div className="p-4 border-2 bg-white-400">      
         <div className="flex flex-row gap-3">
           <img className="w-1/2" src={image} alt={title}/>
           <div className="flex flex-col gap-2 justify-center">

@@ -16,6 +16,7 @@ import Principal from "./pages/communities/sections/Principal";
 import Courses from "./pages/communities/sections/Courses";
 import Projects from "./pages/communities/sections/Projects";
 import Podcasts from "./pages/communities/sections/Videos";
+import Videos from "./pages/communities/sections/Videos";
 
 function AppLayout () {
   return (
@@ -48,12 +49,12 @@ function App () {
             <Route path="notificaciones" element={<Notifications />}/>
             <Route path="seguridad" element={<Security />}/>
           </Route>
-          <Route path="virtual aprende" element={<Communitie />}>
+          <Route path="semillero/:semilleroId" element={<Communitie />}>
             <Route path="principal" element={<Principal />}/>
             <Route path="publicaciones" element={<Posts />}/>
             <Route path="cursos" element={<Courses />}/>
             <Route path="proyectos" element={<Projects />}/>
-            <Route path="videos" element={<Podcasts />}/>
+            <Route path="videos" element={<Videos />}/>
           </Route>
         </Route>
       </Routes>

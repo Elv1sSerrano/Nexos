@@ -11,5 +11,5 @@ export const sideBarItems = [
 
 export const sideBarCommunities = [
   {image: logoEtitc, label: "ETITC", direction: "etitc/principal"},
-  {image: logoVirtualAprende, label: "Virtual Aprende", direction: "virtual aprende/principal"}
+  {image: logoVirtualAprende, label: "Virtual Aprende", direction: `semillero/virtualAprende/principal`}
 ]

@@ -1,7 +1,11 @@
+import { useOutletContext } from "react-router-dom"
 import Project from "../components/Project"
-import { projects } from "../constants"
 
 function Projects () {
+
+  const data = useOutletContext()
+  const projects = data.projects
+
   return (
     <div className="grid grid-cols-2 gap-x-2 gap-y-10">      
       {

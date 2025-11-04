@@ -1,11 +1,15 @@
+import { useOutletContext } from "react-router-dom"
 import Course from "../components/Course"
-import { virtualAprendeCourses } from "../constants"
 
 function Courses () {
+
+  const data = useOutletContext()
+  const courses = data.courses
+
   return (
     <div className="flex flex-col gap-2">
       {
-        virtualAprendeCourses.map((course) => (
+        courses.map((course) => (
           <Course link={course.link} image={course.image}  title={course.title} description={course.description} 
           author={course.author} date={course.date} recomendations={course.recomendations}
           />

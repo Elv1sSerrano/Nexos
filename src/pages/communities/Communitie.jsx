@@ -1,16 +1,26 @@
-import { Outlet } from "react-router-dom";
-import { bannerVirtualAprende, logoVirtualAprende } from "../../assets/images";
+import { Outlet, useParams } from "react-router-dom";
 import Tab from "../../components/ui/Tab";
-import { tabs, virtualAprendeNexos, virtualAprendeParticipants } from "./constants";
+import { tabs } from "./constants"
 import Account from "../../components/ui/Account";
+import { semilleros } from "../../data";
 
 function Communitie () {
+
+  const { semilleroId } = useParams()
+  const data = semilleros[semilleroId]
+
+  //simplificación de datos de la data
+  const participants = data.participants
+  const institutions = data.institutions
+
+  if (!data) return <p className="text-4xl font-bold font-inter">No se encontró la página que estás buscando</p>
+
   return (
     <section>
       <div className="h-56 w-full relative z-10">   
-        <img src={bannerVirtualAprende}/>     
+        <img src={data.banner}/>     
         <div className="w-48 h-48 absolute bottom-[-150px] left-14 z-20">
-          <img className="rounded-full" src={logoVirtualAprende} />
+          <img className="rounded-full" src={data.logo} />
         </div>
       </div>
       <div className="flex flex-row gap-8">
@@ -31,14 +41,14 @@ function Communitie () {
             }
           </ul>
           <div className="ml-[-288px]">            
-            <Outlet />
+            <Outlet context={data} />
           </div>
         </div>
         <div className="flex flex-col gap-5">
           <div className="mt-10">
             <h3 className="font-semibold text-xl mb-3">Nexos</h3>
             <div className="flex flex-col gap-2">
-              {virtualAprendeNexos.map((nexo) => (
+              {institutions.map((nexo) => (
                 <Account key={nexo.label} label={nexo.label} image={nexo.image} />
               ))}
             </div>
@@ -46,7 +56,7 @@ function Communitie () {
           <div>
             <h3 className="font-semibold text-xl mb-3">Miembros</h3>
             <div className="flex flex-col gap-5">
-              {virtualAprendeParticipants.map((participant) => (
+              {participants.map((participant) => (
                 <Account key={participant.id} label={participant.name} image={participant.Picture} />
               ))}
             </div>

@@ -1,7 +1,7 @@
 import Icon from "./Icon"
 import { caretLeftPath, caretRightPath } from "../../constants/iconPaths";
 import Post from "./Post";
-import Resource from "../../pages/communities/components/Resource";
+import Resource from "./Resource";
 import Event from "../../pages/communities/components/Event"
 
 function Carousel ({title, items, Type}) {

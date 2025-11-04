@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 
-function Tab ({name}) {
+function Tab ({name, direction}) {
   return (
     <li>
       <NavLink 
-        to={name}
+        to={direction ? direction : name}
         className={({isActive}) => (
           isActive && 'text-purple-700 font-semibold'           
         )}
