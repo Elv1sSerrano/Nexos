@@ -1,7 +1,7 @@
 import { profileFields } from "../constants"
 import Card from "../components/Card"
 
-function Profile () {
+function ProfileSettings () {
   return (
     <>
       {profileFields.map((setting) => (
@@ -11,4 +11,4 @@ function Profile () {
   )
 }
 
-export default Profile
+export default ProfileSettings

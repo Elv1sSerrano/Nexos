@@ -7,8 +7,8 @@ function EventCard ({image, direction, title, date, location, institution}) {
   return (
     <div className="w-[500px] rounded-xl bg-white">
       <NavLink to={direction} >
-        <div className="relative z-10">
-          <img className="object-top object-cover w-[500px] h-[250px] rounded-xl" src={image}/>
+        <div className="relative z-10 overflow-hidden rounded-xl">
+          <img className="object-top object-cover w-[500px] h-[250px] rounded-xl hover:scale-110 transition duration-300" src={image}/>
         </div>      
         <div className="absolute top-2 right-2 z-20">
           <Icon className={"bg-white rounded-full p-2"} paths={savedPath} />

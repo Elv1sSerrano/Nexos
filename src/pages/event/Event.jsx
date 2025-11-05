@@ -9,9 +9,7 @@ import StorieContainer from "../../components/ui/StorieContainer"
 const Event = () => {
 
   const { eventoId } = useParams()
-  const data = events[eventoId]
-  console.log(eventoId)
-  console.log(data)
+  const data = events[eventoId]  
 
   if (!data) return <p className="text-4xl font-bold font-inter">No se encontró la página que estás buscando</p>
 
@@ -21,9 +19,9 @@ const Event = () => {
   
 
   return (
-    <div>
-      <h3 className="text-4xl font-bold mb-4">{data.title}</h3>
-      <img className="w-[600px] mb-6" src={data.image} />      
+    <div className="font-inter flex flex-col gap-4">
+      <img className="w-full h-[500px] object-cover object-top" src={data.image} />      
+      <h3 className="text-4xl font-bold">{data.title}</h3>
       <div className="flex flex-row gap-1 items-center">
         <Icon paths={calendarPath} />
         <p>{data.date}</p>
@@ -32,16 +30,17 @@ const Event = () => {
         <p>{data.ubication}</p>
       </div>
       <Tag bg={tag.bg} icon={tag.icon} category={tag.category} />
-      <h3 className="text-lg font-semibold">Acerca del evento</h3>
-      <p className="opacity-70 mb-3">{data.description}</p>
-      <h4 className="font-medium mb-3">Participantes</h4>
+      <h3 className="text-2xl font-semibold">Acerca del evento</h3>
+      <p className="opacity-70">{data.description}</p>
+      <h4 className="font-semibold text-xl">Participantes</h4>
+      <hr className="border-t-2 border-gray-600 w-full" />
       <div className="flex flex-row gap-3">
         {participants.map((participant) => (
           <AccountsList key={participant.name} {...participant}/>
         ))}
       </div>
-      <hr className="border-t-2 border-gray-600 w-full my-4" />
-      <h4 className="font-medium mb-3">Publicaciones</h4>
+      <hr className="border-t-2 border-gray-600 w-full" />
+      <h4 className="font-semibold text-xl">Publicaciones</h4>
       {
         stories.map((storie) => (
           <StorieContainer key={storie.id} {...storie} />

@@ -8,14 +8,14 @@ import Explore from "./pages/explore/Explore";
 import Saved from "./pages/saved/Saved";
 import Communitie from "./pages/communities/Communitie";
 import Preferences from "./pages/settings/sections/Preferences";
-import Profile from "./pages/settings/sections/Profile";
+import ProfileSettings from "./pages/settings/sections/ProfileSetings";
+import Profile from "./pages/profile/Profile";
 import Security from "./pages/settings/sections/Security";
 import Notifications from "./pages/settings/sections/Notifications";
 import Posts from "./pages/communities/sections/Posts";
 import Principal from "./pages/communities/sections/Principal";
 import Courses from "./pages/communities/sections/Courses";
 import Projects from "./pages/communities/sections/Projects";
-import Podcasts from "./pages/communities/sections/Videos";
 import Videos from "./pages/communities/sections/Videos";
 import Event from "./pages/event/Event";
 
@@ -43,11 +43,11 @@ function App () {
           <Route path="inicio" element={<Feed />}/>
           <Route path="explorar" element={<Explore />}/>
           <Route path="explorar/:eventoId" element={<Event />}/>            
-          <Route path="perfil" element={<Profile />}/>
+          <Route path="perfil/:userId" element={<Profile />}/>
           <Route path="guardados" element={<Saved />}/>
           <Route path="ajustes" element={<Settings />}>
             <Route path="preferencias" element={<Preferences />}/>
-            <Route path="perfil" element={<Profile />}/>
+            <Route path="perfil" element={<ProfileSettings />}/>
             <Route path="notificaciones" element={<Notifications />}/>
             <Route path="seguridad" element={<Security />}/>
           </Route>
