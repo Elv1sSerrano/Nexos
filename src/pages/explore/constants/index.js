@@ -1,7 +1,7 @@
 import {expo2024, logoEtitc, recursoEnlaceDigital, recursoNexos} from "../../../assets/images"
 
 export const nextEvents = [
-  {image: expo2024, title: "Expo 2025", date: "Noviembre 27, 2025", location: "Cl. 13 #16-74, Bogotá", institution: {image: logoEtitc, label: "ETITC"}},
+  {image: expo2024, direction: "expo2025" , title: "Expo 2025", date: "Noviembre 27, 2025", location: "Cl. 13 #16-74, Bogotá", institution: {image: logoEtitc, label: "ETITC"}},
 ]
 
 export const popularProjects = [

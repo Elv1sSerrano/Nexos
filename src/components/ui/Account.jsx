@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom"
 
-function Account ({label, image, direction, additionalStyle}) {
+function Account ({label, image, direction, additionalStyle, additionalImageStyle}) {
   return (
     <div>
       <NavLink to={`/app/${direction}`} className="flex items-center space-x-3">
-        <img src={image} className="w-8 object-cover rounded-full"/>
+        <img src={image} className={`w-8 object-cover rounded-full ${additionalImageStyle}`}/>
         <p className={`flex-grow min-w-0 truncate ${additionalStyle}`}>{label}</p>
       </NavLink>
     </div>

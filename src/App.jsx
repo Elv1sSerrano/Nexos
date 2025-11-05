@@ -17,6 +17,7 @@ import Courses from "./pages/communities/sections/Courses";
 import Projects from "./pages/communities/sections/Projects";
 import Podcasts from "./pages/communities/sections/Videos";
 import Videos from "./pages/communities/sections/Videos";
+import Event from "./pages/event/Event";
 
 function AppLayout () {
   return (
@@ -41,6 +42,7 @@ function App () {
         <Route path='/app' element={<AppLayout />}>
           <Route path="inicio" element={<Feed />}/>
           <Route path="explorar" element={<Explore />}/>
+          <Route path="explorar/:eventoId" element={<Event />}/>            
           <Route path="perfil" element={<Profile />}/>
           <Route path="guardados" element={<Saved />}/>
           <Route path="ajustes" element={<Settings />}>
