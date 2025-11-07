@@ -1,14 +1,14 @@
 import Icon from "./Icon"
 import { caretLeftPath, caretRightPath } from "../../constants/iconPaths";
-import Post from "./Post";
 import Resource from "./Resource";
 import Event from "../../pages/communities/components/Event"
+import HeadlessPost from "./HeadlessPost";
 
 function Carousel ({title, items, Type}) {
 
   function renderItems() {
     switch (Type) {
-      case Post:
+      case HeadlessPost:
         return (
           <div className="flex flex-row gap-2">
             {items.map((item, index) => (          

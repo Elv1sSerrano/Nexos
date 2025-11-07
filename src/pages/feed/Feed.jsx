@@ -4,6 +4,7 @@ import { configurationPath } from "../../constants/iconPaths";
 import { newsCards, posts } from "./constants";
 import NewsCard from "./components/NewsCard";
 import Post from "../../components/ui/Post";
+import HeadlessPost from "../../components/ui/HeadlessPost";
 
 function Feed () {
   return (
@@ -24,7 +25,7 @@ function Feed () {
       <div className="flex flex-col items-center gap-4">
         {
           posts.map((post) => (
-            <Post profilePicture={post.profilePicture} author={post.author} date={post.date} body={post.body} image={post.image}/>
+            <HeadlessPost key={post.id} {...post} />
           ))
         }
       </div>

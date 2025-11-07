@@ -1,3 +1,4 @@
+import HeadlessPost from "../../../components/ui/HeadlessPost";
 import Post from "../../../components/ui/Post";
 import { useOutletContext } from "react-router-dom";
 
@@ -10,7 +11,7 @@ function Posts () {
     <div className="flex flex-col items-center">
       {
         posts.map((post) => (
-          <Post profilePicture={post.profilePicture} author={post.author} date={post.date} body={post.body} image={post.image}/>
+          <HeadlessPost key={post.id} {...post} />          
         ))
       }
     </div>    
