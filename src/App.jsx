@@ -18,6 +18,9 @@ import Courses from "./pages/communities/sections/Courses";
 import Projects from "./pages/communities/sections/Projects";
 import Videos from "./pages/communities/sections/Videos";
 import Event from "./pages/event/Event";
+import SummarySection from "./pages/profile/sections/SummarySection";
+import PostSection from "./pages/profile/sections/PostsSection";
+import ResourcesSection from "./pages/profile/sections/ResourcesSection";
 
 function AppLayout () {
   return (
@@ -43,7 +46,11 @@ function App () {
           <Route path="inicio" element={<Feed />}/>
           <Route path="explorar" element={<Explore />}/>
           <Route path="explorar/:eventoId" element={<Event />}/>            
-          <Route path="perfil/:userId" element={<Profile />}/>
+          <Route path="perfil/:userId" element={<Profile />}>
+            <Route path="resumen" element={<SummarySection />} />
+            <Route path="publicaciones" element={<PostSection />} />
+            <Route path="recursos" element={<ResourcesSection />} />
+          </Route>
           <Route path="guardados" element={<Saved />}/>
           <Route path="ajustes" element={<Settings />}>
             <Route path="preferencias" element={<Preferences />}/>

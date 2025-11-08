@@ -8,7 +8,7 @@ function Resource ({image, title, category, description, url}) {
         <img
           src={image}
           alt={title}
-          className="h-[200px] w-[350px] object-cover rounded-lg"
+          className="h-[240px] w-[420px] object-cover rounded-lg"
         />
       </div>      
       <div className="mt-6">

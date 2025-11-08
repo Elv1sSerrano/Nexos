@@ -11,7 +11,7 @@ const HeadlessPost = ({ profilePicture, author, date, body, image, id }) => {
       onMouseLeave={() => setShowReactions(false)}
       className="relative flex flex-row gap-[1px]"
     >
-      <div className="p-1 w-[500px] flex flex-col gap-3 border-2 rounded-lg bg-white">
+      <div className="p-1 w-[600px] flex flex-col gap-3 border-2 rounded-lg bg-white">
         <div className="flex flex-row justify-start items-center">
           <img className="w-8 object-cover rounded-full mr-2" src={profilePicture} alt="" />
           <div className="flex flex-col">
@@ -19,12 +19,11 @@ const HeadlessPost = ({ profilePicture, author, date, body, image, id }) => {
             <p className="text-[12px] font-normal m-0">{date}</p>
           </div>
         </div>
-
-        <img src={image} alt={id} className="w-full max-h-[600px] object-cover rounded-md" />
-
+        {
+          image && (<img src={image} alt={id} className="w-full max-h-[600px] object-cover rounded-md" />) 
+        }        
         <p className="font-inter">{body}</p>
       </div>
-
       
       {showReactions && (
         <div          

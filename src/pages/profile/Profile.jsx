@@ -12,7 +12,7 @@ function Profile () {
   
   return (
     <section className="p-4 flex flex-col gap-2">
-      <h1 className="font-bold text-[35px] mb-8">Perfil</h1>
+      <h1 className="font-bold text-[35px] mb-2">Perfil</h1>
       <div className="flex flex-col items-center gap-2">
         <img src={data.image} className="w-[200px] h-[200px] rounded-full object-cover" />
         <h3 className="font-semibold text-2xl">{data.name}</h3>
@@ -25,7 +25,7 @@ function Profile () {
           ))
         }
       </ul>
-      <div className="ml-[-288px]">            
+      <div>            
         <Outlet context={data} />
       </div>
     </section>
