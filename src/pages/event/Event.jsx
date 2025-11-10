@@ -20,7 +20,7 @@ const Event = () => {
 
   return (
     <div className="font-inter flex flex-col gap-4">
-      <img className="w-full h-[500px] object-cover object-top" src={data.image} />      
+      <img className="w-full h-[500px] object-cover object-top rounded-lg" src={data.image} />      
       <h3 className="text-4xl font-bold">{data.title}</h3>
       <div className="flex flex-row gap-1 items-center">
         <Icon paths={calendarPath} />

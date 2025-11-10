@@ -1,9 +1,11 @@
 import { faker } from "@faker-js/faker";
 
-import { logoVirtualAprende, publicacion1, recursoEnlaceDigital, recursoNexos, eventoCongreso, eventoRedColsi, eventoRedColsi2,
+import { logoVirtualAprende, recursoEnlaceDigital, recursoNexos, eventoCongreso, eventoRedColsi, eventoRedColsi2,
   logoEtitc, logoUD, bannercursoVideo, miniaturaCurso, miniaturaIndustria4,
   bannerVirtualAprende
 } from "../../assets/images"
+
+import posts from "../posts";
 
 const virtualAprendeParticipants = []
 const participantsNexos = []
@@ -35,9 +37,7 @@ const virtualAprende = {
   summary: {
     summary: "El Grupo de investigación interinstitucional en ambientes virtuales de aprendizaje 'Virtus' es una organización avalada por la Escuela Tecnológica Instituto Técnico Central y la Universidad Distrital Francisco José de Caldas, dos instituciones de educación superior públicas, ubicadas en Bogotá, Colombia. El grupo hace investigación en seis líneas: Ambientes y Herramientas Virtuales de Aprendizaje. Tecnología Educativa. Sistemas Adaptativos y Sistemas Recomendadores. Gamificación y Videojuegos. Ingeniería Web. Gestión del Conocimiento y su Aplicación Organizacional."
   },
-  posts: [
-    {profilePicture: logoVirtualAprende, author: 'Virtual Aprende', date: 'Hace 4 días', body: '#InstituciónAlDía 📻 vuelve mañana con una conversación imperdible sobre Transformación Institucional junto a Jaime Alberto Cataño, asesor y consultor en educación superior 🎙️ Conéctese a las 3 p.m. por nuestro Facebook Live y sea parte del diálogo que impulsa el cambio', image: publicacion1},    
-  ],
+  posts: posts.filter((post) => (post.authorId === "virtualAprende")),
   resources: [
     {image: recursoEnlaceDigital, title: "Enlace Digital", category: "Repositorio de contenido", description: "No sé son muchas cosas y no es mi proyecto jaja", url: "https://pedagogiavirtual.com/renlacedigital/node/16"},
     {image: recursoNexos, title: "Nexos", category: "Red de comunicación", description: "No sé son muchas cosas y no es mi proyecto jaja", url: "https://nexos-elvis-serranos-projects.vercel.app"}

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, Navigate } from "react-router-dom";
 import LandingPage from "./pages/landing/LandingPage";
 import NavBar from "./components/layout/NavBar";
 import SideBar from './components/layout/SideBar'
@@ -47,12 +47,14 @@ function App () {
           <Route path="explorar" element={<Explore />}/>
           <Route path="explorar/:eventoId" element={<Event />}/>            
           <Route path="perfil/:userId" element={<Profile />}>
+            <Route path="" element={<Navigate to={"resumen"} replace />}/>
             <Route path="resumen" element={<SummarySection />} />
             <Route path="publicaciones" element={<PostSection />} />
             <Route path="recursos" element={<ResourcesSection />} />
           </Route>
           <Route path="guardados" element={<Saved />}/>
           <Route path="ajustes" element={<Settings />}>
+            <Route path="" element={<Navigate to={"preferencias"} replace />}/>
             <Route path="preferencias" element={<Preferences />}/>
             <Route path="perfil" element={<ProfileSettings />}/>
             <Route path="notificaciones" element={<Notifications />}/>

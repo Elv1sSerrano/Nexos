@@ -9,7 +9,7 @@ const StorieContainer = ({url, account}) => {
       </div>
       <br></br>   
       <div className='flex justify-center'>
-        <ReactPlayer         
+        <ReactPlayer     
           src={url}
           playing={true}
           volume={0}

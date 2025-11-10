@@ -4,9 +4,9 @@ import { homePath, profilePath, savedPath, settingsPath, trendPath } from "../..
 export const sideBarItems = [
   {icon: homePath, label: "Inicio", direction: "inicio"},
   {icon: trendPath, label: "Explorar", direction: "explorar"},  
-  {icon: profilePath, label: "Perfil", direction: "perfil/elvisserrano/resumen"},  
+  {icon: profilePath, label: "Perfil", direction: "perfil/elvisserrano"},  
   {icon: savedPath, label: "Guardados", direction: "guardados"},  
-  {icon: settingsPath, label: "Ajustes", direction: "ajustes/preferencias"},  
+  {icon: settingsPath, label: "Ajustes", direction: "ajustes"},  
 ]
 
 export const sideBarCommunities = [

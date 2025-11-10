@@ -1,7 +1,8 @@
 import Icon from './Icon'
 import { commentPath, likePath, savedPath, sendPath } from '../../constants/iconPaths'
 
-function Post ({profilePicture, author, date, body, image}) {
+function Post ({profilePicture, author, date, body, image}) {  
+
   return (
     <div className="border-2 rounded-lg w-[600px] bg-white-400">
       <div className="p-2 flex flex-row justify-start items-center">

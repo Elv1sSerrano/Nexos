@@ -1,9 +1,22 @@
 import { useState } from "react";
-import { commentPath, likePath, savedPath, sendPath } from "../../constants/iconPaths";
+import { commentPath, likePath, savedFilledPath, savedPath, sendPath } from "../../constants/iconPaths";
 import Icon from "./Icon";
+import posts from "../../data/posts";
 
 const HeadlessPost = ({ profilePicture, author, date, body, image, id }) => {
-  const [showReactions, setShowReactions] = useState(false);
+  const [showReactions, setShowReactions] = useState(false)
+  const [saved, setSaved] = useState(false)
+  const [savedPosts, setSavedPosts] = useState([])
+
+  function savePost(id) {
+    setSaved(prev => !prev)
+    const foundPost = posts.find((post) => post.id === id)
+    if (!savedPosts.some(p => p.id === foundPost.id)) {
+      setSavedPosts( prev => [...prev, foundPost])
+    } else {
+      setSavedPosts(prev => prev.filter(p => p.id !== foundPost.id))
+    }
+  }
 
   return (
     <div
@@ -38,8 +51,11 @@ const HeadlessPost = ({ profilePicture, author, date, body, image, id }) => {
           <button>
             <Icon paths={sendPath} className={"rounded-full text-black w-8"} />
           </button>
-          <button>
-            <Icon paths={savedPath} className={"rounded-full text-black w-8"} />
+          <button onClick={() => savePost(id)}>
+            <Icon 
+              paths={saved ? savedFilledPath : savedPath} 
+              className={saved ? "rounded-full text-yellow-500 w-8" : "rounded-full text-black w-8"} 
+            />
           </button>
         </div>
       )}

@@ -1,6 +1,7 @@
 import { logoVirtualAprende, recursoNexos } from "../../assets/images"
 import fotoElvis from "../../assets/images/users/fotoElvis.jpeg"
 import recursoWeatherApp from "../../assets/images/resources/recursoWeatherApp.png"
+import posts from "../posts"
 
 const elvisserrano = {
   id: "elvisserrano",
@@ -19,9 +20,7 @@ const elvisserrano = {
   externalResources: [
     {site: "Linkedin", url: "https://www.linkedin.com/in/elvis-serrano-7a0602270/"}
   ],
-  posts: [
-    {id:"1", profilePicture: fotoElvis, author: 'Elvis Serrano', date: 'Hace 8 días', body: '👍'},    
-  ],
+  posts: posts.filter((post) => (post.authorId === "elvisserrano")),
   resources: [  
     {id: "1", image: recursoNexos, title: "Nexos", category: "Red de comunicación", description: "Aplicación para facilitar la interacción y divulgación de contenido educativo", url: "https://nexos-elvis-serranos-projects.vercel.app"},
     {id: "2", image: recursoWeatherApp, title: "Weather App", category: "Página web", description: "Página para ver la temperatura y predicciones del clima de acuerdo a la ubicación actual (Solo funciona en teléfonos)", url: "https://weather-app-drab-phi.vercel.app/"}
