@@ -24,7 +24,7 @@ import ResourcesSection from "./pages/profile/sections/ResourcesSection";
 
 function AppLayout () {
   return (
-    <div className="font-inter bg-[#ececf0]">
+    <div className="font-inter min-h-screen bg-[#ececf0]">
       <NavBar />
       <div className="flex pt-24">
         <SideBar />
@@ -41,33 +41,32 @@ function App () {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<LandingPage />} />
-
-        <Route path='/app' element={<AppLayout />}>
-          <Route path="inicio" element={<Feed />}/>
-          <Route path="explorar" element={<Explore />}/>
-          <Route path="explorar/:eventoId" element={<Event />}/>            
-          <Route path="perfil/:userId" element={<Profile />}>
-            <Route path="" element={<Navigate to={"resumen"} replace />}/>
-            <Route path="resumen" element={<SummarySection />} />
-            <Route path="publicaciones" element={<PostSection />} />
-            <Route path="recursos" element={<ResourcesSection />} />
+          <Route path='/app' element={<AppLayout />}>
+            <Route path="inicio" element={<Feed />}/>
+            <Route path="explorar" element={<Explore />}/>
+            <Route path="explorar/:eventoId" element={<Event />}/>            
+            <Route path="perfil/:userId" element={<Profile />}>
+              <Route path="" element={<Navigate to={"resumen"} replace />}/>
+              <Route path="resumen" element={<SummarySection />} />
+              <Route path="publicaciones" element={<PostSection />} />
+              <Route path="recursos" element={<ResourcesSection />} />
+            </Route>
+            <Route path="guardados" element={<Saved />}/>
+            <Route path="ajustes" element={<Settings />}>
+              <Route path="" element={<Navigate to={"preferencias"} replace />}/>
+              <Route path="preferencias" element={<Preferences />}/>
+              <Route path="perfil" element={<ProfileSettings />}/>
+              <Route path="notificaciones" element={<Notifications />}/>
+              <Route path="seguridad" element={<Security />}/>
+            </Route>
+            <Route path="semillero/:semilleroId" element={<Communitie />}>
+              <Route path="principal" element={<Principal />}/>
+              <Route path="publicaciones" element={<Posts />}/>
+              <Route path="cursos" element={<Courses />}/>
+              <Route path="proyectos" element={<Projects />}/>
+              <Route path="videos" element={<Videos />}/>
+            </Route>
           </Route>
-          <Route path="guardados" element={<Saved />}/>
-          <Route path="ajustes" element={<Settings />}>
-            <Route path="" element={<Navigate to={"preferencias"} replace />}/>
-            <Route path="preferencias" element={<Preferences />}/>
-            <Route path="perfil" element={<ProfileSettings />}/>
-            <Route path="notificaciones" element={<Notifications />}/>
-            <Route path="seguridad" element={<Security />}/>
-          </Route>
-          <Route path="semillero/:semilleroId" element={<Communitie />}>
-            <Route path="principal" element={<Principal />}/>
-            <Route path="publicaciones" element={<Posts />}/>
-            <Route path="cursos" element={<Courses />}/>
-            <Route path="proyectos" element={<Projects />}/>
-            <Route path="videos" element={<Videos />}/>
-          </Route>
-        </Route>
       </Routes>
     </BrowserRouter>
   );
