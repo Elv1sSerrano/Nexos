@@ -26,7 +26,7 @@ function Communitie () {
       <div className="flex flex-row gap-8">
         <div className="ml-72 mt-6 max-w-[650px]">
           <div className="flex flex-row gap-8 items-center">
-            <h1 className="font-bold text-4xl">Virtual Aprende</h1>
+            <h1 className="font-bold text-4xl">{data.name}</h1>
             <div className="flex flex-row gap-3 items-center">
               <button className="text-white bg-purple-500 px-4 py-2 rounded-md">Seguir</button>
               <button className="border-2 px-4 py-[7px] rounded-md border-gray-700 text-gray-700">Mensaje</button>
@@ -46,7 +46,7 @@ function Communitie () {
         </div>
         <div className="flex flex-col gap-5">
           <div className="mt-10">
-            <h3 className="font-semibold text-xl mb-3">Nexos</h3>
+            <h3 className="font-semibold text-xl mb-3">Instituciones</h3>
             <div className="flex flex-col gap-2">
               {institutions.map((nexo) => (
                 <Account key={nexo.label} label={nexo.label} image={nexo.image} />

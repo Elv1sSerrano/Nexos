@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
 import Icon from "../ui/Icon";
-import { sideBarItems, sideBarCommunities } from "./constants";
+import { sideBarItems, sideBarCommunities, sidebarChannels } from "./constants";
 import { configurationPath } from "../../constants/iconPaths";
 import Account from "../ui/Account";
 
 function SideBar () {
   return (
-    <aside className="fixed top-28 left-8 w-52">
+    <aside className="fixed top-28 left-8 w-52 overflow-auto h-screen">
       <div className="flex flex-col gap-4"> 
         {sideBarItems.map((item) => (
           <NavLink key={item.label} to={`/app/${item.direction}`}            
@@ -39,8 +39,20 @@ function SideBar () {
           ))
         }
       </div>
-      <hr className="border-t-2 border-gray-300 w-full my-4" />   
-      <div className="flex flex-row items-center gap-4 mb-3">
+      <hr className="border-t-2 border-gray-300 w-full my-4" />
+      <div className="flex flex-row justify-between items-center gap-4 mb-3">
+        <h2 className="text-[#303538] font-semibold font-montserrat">Canales</h2>  
+        <button><Icon className="text-[#303538] w-5 h-5" paths={configurationPath}/></button>
+      </div>    
+      <div className="flex flex-col gap-4">
+        {
+          sidebarChannels.map((communitie) => (
+            <Account key={communitie.label} label={communitie.label} direction={communitie.direction} image={communitie.image} />
+          ))
+        }
+      </div>
+      <hr className="border-t-2 border-gray-300 w-full my-4" />
+      <div className="flex flex-row justify-between items-center gap-4 mb-3">
         <h2 className="text-[#303538] font-semibold font-montserrat">Comunidades</h2>  
         <button><Icon className="text-[#303538] w-5 h-5" paths={configurationPath}/></button>
       </div>    

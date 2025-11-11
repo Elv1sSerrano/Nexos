@@ -21,6 +21,8 @@ import Event from "./pages/event/Event";
 import SummarySection from "./pages/profile/sections/SummarySection";
 import PostSection from "./pages/profile/sections/PostsSection";
 import ResourcesSection from "./pages/profile/sections/ResourcesSection";
+import Institution from "./pages/institutions/Institution";
+import Channel from "./pages/channels/Channel";
 
 function AppLayout () {
   return (
@@ -65,6 +67,10 @@ function App () {
               <Route path="cursos" element={<Courses />}/>
               <Route path="proyectos" element={<Projects />}/>
               <Route path="videos" element={<Videos />}/>
+            </Route>
+            <Route path="institucion/:institutionId/canal" element={<Channel />} />
+            <Route path="institucion/:institutionId" element={<Institution />}>
+              
             </Route>
           </Route>
       </Routes>
