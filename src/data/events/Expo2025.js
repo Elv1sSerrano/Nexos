@@ -5,11 +5,13 @@ import { computerPath } from "../../constants/iconPaths"
 
 const expo2025 = {
   id: "expo2025",
+  hostId: "etitc",
   name: "Expo 2025",
   image: imagenExpo2025,
   title: "Expo 2025",
   ubication: "Cl. 13 #16-74, Bogotá",
   date: "27 de noviembre de 2025",
+  direction: "/app/explorar/expo2025",
   tag: {
     bg: "bg-[#8AA624]",
     icon: computerPath,

@@ -1,12 +1,15 @@
 import { NavLink } from "react-router-dom";
 import Icon from "../../components/ui/Icon";
 import { configurationPath } from "../../constants/iconPaths";
-import { newsCards, posts } from "./constants";
+import { newsCards } from "./constants";
 import NewsCard from "./components/NewsCard";
-import Post from "../../components/ui/Post";
 import HeadlessPost from "../../components/ui/HeadlessPost";
+import { accountData } from "../../data";
 
 function Feed () {
+
+  const posts = accountData.followingAccounts.map((account) => account.posts)  
+
   return (
     <div>
       <div className="flex flex-row justify-between w-full">
@@ -25,7 +28,9 @@ function Feed () {
       <div className="flex flex-col items-center gap-4">
         {
           posts.map((post) => (
-            <HeadlessPost key={post.id} {...post} />
+            post.map((pos) => (
+              <HeadlessPost key={pos.id} {...pos} />
+            ))
           ))
         }
       </div>

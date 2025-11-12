@@ -1,4 +1,4 @@
-import EventCard from "../components/EventCard";
+import EventCard from "../../../components/ui/EventCard";
 import { nextEvents } from "../constants";
 
 function EventsSection () {

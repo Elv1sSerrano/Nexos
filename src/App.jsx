@@ -23,6 +23,10 @@ import PostSection from "./pages/profile/sections/PostsSection";
 import ResourcesSection from "./pages/profile/sections/ResourcesSection";
 import Institution from "./pages/institutions/Institution";
 import Channel from "./pages/channels/Channel";
+import InstitutionPosts from "./pages/institutions/sections/InstitutionsPosts";
+import InstitutionInfo from "./pages/institutions/sections/InstitutionInfo";
+import InstitutionGroups from "./pages/institutions/sections/InstitutionGroups";
+import InstitutionEvents from "./pages/institutions/sections/InstitutionEvents";
 
 function AppLayout () {
   return (
@@ -62,6 +66,7 @@ function App () {
               <Route path="seguridad" element={<Security />}/>
             </Route>
             <Route path="semillero/:semilleroId" element={<Communitie />}>
+              <Route path="" element={<Navigate to={"principal"} replace/>} />
               <Route path="principal" element={<Principal />}/>
               <Route path="publicaciones" element={<Posts />}/>
               <Route path="cursos" element={<Courses />}/>
@@ -70,7 +75,11 @@ function App () {
             </Route>
             <Route path="institucion/:institutionId/canal" element={<Channel />} />
             <Route path="institucion/:institutionId" element={<Institution />}>
-              
+              <Route path="" element={<Navigate to={"publicaciones"} replace />} />
+              <Route path="publicaciones" element={<InstitutionPosts />} />
+              <Route path="acerca-de" element={<InstitutionInfo />} />
+              <Route path="eventos" element={<InstitutionEvents />} />
+              <Route path="grupos-de-investigacion" element={<InstitutionGroups />} />
             </Route>
           </Route>
       </Routes>

@@ -34,6 +34,7 @@ const virtualAprende = {
   name: "Virtual Aprende",
   banner: bannerVirtualAprende,
   logo: logoVirtualAprende,
+  description: "Aprendizaje flexible multimedial",
   summary: {
     summary: "El Grupo de investigación interinstitucional en ambientes virtuales de aprendizaje 'Virtus' es una organización avalada por la Escuela Tecnológica Instituto Técnico Central y la Universidad Distrital Francisco José de Caldas, dos instituciones de educación superior públicas, ubicadas en Bogotá, Colombia. El grupo hace investigación en seis líneas: Ambientes y Herramientas Virtuales de Aprendizaje. Tecnología Educativa. Sistemas Adaptativos y Sistemas Recomendadores. Gamificación y Videojuegos. Ingeniería Web. Gestión del Conocimiento y su Aplicación Organizacional."
   },

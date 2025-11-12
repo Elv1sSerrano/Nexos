@@ -11,7 +11,7 @@ function Carousel ({title, items, Type}) {
       case HeadlessPost:
         return (
           <div className="flex flex-row gap-2">
-            {items.map((item, index) => (          
+            {items?.map((item, index) => (          
               <Type key={index} {...item}/>
             ))}
           </div>          
@@ -19,7 +19,7 @@ function Carousel ({title, items, Type}) {
       case Resource:
         return (
           <div className="flex flex-row gap-2">
-            {items.map((item, index) => (          
+            {items?.map((item, index) => (          
               <Type key={index} {...item}/>
             ))}
           </div> 
@@ -27,7 +27,7 @@ function Carousel ({title, items, Type}) {
       case Event:
         return (
           <div className="flex flex-row gap-2">
-            {items.map((item, index) => (          
+            {items?.map((item, index) => (          
               <Type key={index} {...item}/>
             ))}
           </div> 

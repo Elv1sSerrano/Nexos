@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
-import Account from "../../../components/ui/Account"
-import Icon from "../../../components/ui/Icon"
-import { savedPath } from "../../../constants/iconPaths"
+import Account from "./Account"
+import Icon from "./Icon"
+import { savedPath } from "../../constants/iconPaths"
 
 function EventCard ({image, direction, title, date, location, institution}) {
   return (
@@ -17,7 +17,7 @@ function EventCard ({image, direction, title, date, location, institution}) {
           <h3 className="font-semibold text-lg">{title}</h3>
           <p className="opacity-50">{date}</p>
           <p className="opacity-50">{location}</p>
-          <Account key={institution.image} label={institution.label} image={institution.image} additionalStyle={"opacity-50"} />
+          {institution && <Account key={institution.image} label={institution.label} image={institution.image} additionalStyle={"opacity-50"} /> }
         </div>        
       </NavLink>      
     </div>

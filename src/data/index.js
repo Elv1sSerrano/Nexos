@@ -2,9 +2,11 @@ import expo2025 from "./events/Expo2025";
 import virtualAprende from "./semilleros/virtualAprende";
 import elvisserrano from "./users/elvisSerrano";
 import etitc from "./institutions/etitc";
+import kVant from "./semilleros/kVant";
 
 export const semilleros = {
-  virtualAprende
+  virtualAprende,
+  kVant
 }
 
 export const institutions = {
@@ -17,4 +19,17 @@ export const events = {
 
 export const users = {
   elvisserrano
+}
+
+export const accountData = {
+  followingAccounts: [
+    etitc,
+    virtualAprende
+  ],
+  channels: [
+    {etitc}
+  ],
+  personalData: [
+    {elvisserrano}
+  ]
 }

@@ -11,7 +11,7 @@ function Principal () {
 
   return (
     <div className="flex flex-col gap-3">
-      <SummaryCard summary={data.summary.summary} />
+      <SummaryCard summary={data.summary?.summary} />
       <Carousel title={"Destacados"} items={data.posts} Type={HeadlessPost}/>
       <Carousel title={"Recursos"} items={data.resources} Type={Resource}/>
       <Carousel title={"Participación en eventos"} items={data.events} Type={Event}/>

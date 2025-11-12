@@ -32,7 +32,7 @@ function Communitie () {
               <button className="border-2 px-4 py-[7px] rounded-md border-gray-700 text-gray-700">Mensaje</button>
             </div>          
           </div>          
-          <hr class="border-t-2 border-gray-300 w-full my-4" />
+          <hr className="border-t-2 border-gray-300 w-full my-4" />
           <ul className="flex flex-row justify-between my-6">
             {
               tabs.map((tab) => (
@@ -48,7 +48,7 @@ function Communitie () {
           <div className="mt-10">
             <h3 className="font-semibold text-xl mb-3">Instituciones</h3>
             <div className="flex flex-col gap-2">
-              {institutions.map((nexo) => (
+              {institutions?.map((nexo) => (
                 <Account key={nexo.label} label={nexo.label} image={nexo.image} />
               ))}
             </div>
@@ -56,7 +56,7 @@ function Communitie () {
           <div>
             <h3 className="font-semibold text-xl mb-3">Miembros</h3>
             <div className="flex flex-col gap-5">
-              {participants.map((participant) => (
+              {participants?.map((participant) => (
                 <Account key={participant.id} label={participant.name} image={participant.Picture} />
               ))}
             </div>
