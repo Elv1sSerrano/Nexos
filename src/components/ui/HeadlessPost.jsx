@@ -1,13 +1,16 @@
 import { useState } from "react";
-import { commentPath, likePath, savedFilledPath, savedPath, sendPath } from "../../constants/iconPaths";
+import { commentPath, likeFilledPath, likePath, savedFilledPath, savedPath, sendPath } from "../../constants/iconPaths";
 import Icon from "./Icon";
 import { useSavedPostsContext, useSavedPostsToggleContext } from "../../context/savedPosts/SavedPostsContext";
+import { useLikedPostsContext, useLikePostsToggleContext } from "../../context/likedPosts/LikedPostsContext";
 
 const HeadlessPost = ({ profilePicture, author, date, body, image, id }) => {
   const [showReactions, setShowReactions] = useState(false)  
   
   const savePost = useSavedPostsToggleContext()  
   const savedPosts = useSavedPostsContext()
+  const likePost = useLikePostsToggleContext()
+  const likedPosts = useLikedPostsContext()
 
   return (
     <div
@@ -33,8 +36,10 @@ const HeadlessPost = ({ profilePicture, author, date, body, image, id }) => {
         <div          
           className="absolute right-[-50px] top-1/2 -translate-y-1/2 flex flex-col gap-2 bg-white shadow-lg rounded-lg p-2"
         >
-          <button>
-            <Icon paths={likePath} className={"rounded-full text-black w-8"} />
+          <button onClick={() => likePost(id)}>
+            <Icon 
+              paths={likedPosts.find((post) => post.id === id) ? likeFilledPath : likePath } 
+              className={likedPosts.find((post) => post.id === id) ? "rounded-full text-blue-500 w-8" : "rounded-full text-black w-8"} />
           </button>
           <button>
             <Icon paths={commentPath} className={"rounded-full text-black w-8"} />

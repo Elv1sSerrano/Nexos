@@ -3,10 +3,14 @@ import virtualAprende from "./semilleros/virtualAprende";
 import elvisserrano from "./users/elvisSerrano";
 import etitc from "./institutions/etitc";
 import kVant from "./semilleros/kVant";
+import sapientiam from "./semilleros/sapientiam";
+import solidWorks from "./semilleros/solidWorks";
 
 export const semilleros = {
   virtualAprende,
-  kVant
+  kVant,
+  sapientiam,
+  solidWorks
 }
 
 export const institutions = {

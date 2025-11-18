@@ -1,7 +1,8 @@
-import {expo2024, logoEtitc, recursoEnlaceDigital, recursoNexos} from "../../../assets/images"
+import {logoEtitc, recursoEnlaceDigital, recursoNexos} from "../../../assets/images"
+import instalaciones from "../../../assets/images/events/instalaciones.jpg"
 
 export const nextEvents = [
-  {image: expo2024, direction: "expo2025" , title: "Expo 2025", date: "Noviembre 27, 2025", location: "Cl. 13 #16-74, Bogotá", institution: {image: logoEtitc, label: "ETITC"}},
+  {image: instalaciones, direction: "expo2025" , title: "Expo 2025", date: "Noviembre 27, 2025", location: "Cl. 13 #16-74, Bogotá", institution: {image: logoEtitc, label: "ETITC"}},
 ]
 
 export const popularProjects = [

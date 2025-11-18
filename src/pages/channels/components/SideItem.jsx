@@ -14,7 +14,7 @@ const SideItem = ({item}) => {
             items.map((item) => (
               <section className="flex flex-row gap-2">
                 <Icon paths={hashtagPath} />
-                <p>{item.name}</p>
+                <p className="opacity-75">{item.name}</p>
               </section>          
             ))
           }

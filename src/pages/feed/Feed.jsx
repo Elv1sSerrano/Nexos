@@ -27,7 +27,10 @@ function Feed () {
       </div>
       <div className="flex flex-col items-center gap-4">
         {
-          posts.map((post) => (
+          posts
+          .slice()
+          .sort((a, b) => b.id - a.id)
+          .map((post) => (
             post.map((pos) => (
               <HeadlessPost key={pos.id} {...pos} />
             ))

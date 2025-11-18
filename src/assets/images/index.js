@@ -26,7 +26,7 @@ import bannerVirtualAprende from './banners/bannerVirtualAprende.png'
 import publicacion1 from './posts/publicacion1.jpg'
 
 //Imágenes de cursos
-import bannercursoVideo from './courses/bannercursoVideo.jpg'
+import bannercursoVideo from './courses/bannerCursoVideo.jpg'
 
 //Imágenes de videos
 import miniaturaCurso from './videos/miniaturaCurso.png'

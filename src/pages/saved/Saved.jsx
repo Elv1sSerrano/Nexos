@@ -1,5 +1,5 @@
 import HeadlessPost from "../../components/ui/HeadlessPost"
-import { useSavedPostsContext } from "../../context/savedPosts/SavedPostsContext"
+import { useSavedPostsContext } from "../../context/savedPosts/SavedPostsContext.js"
 
 function Saved () {
 

@@ -15,14 +15,17 @@ const etitc = {
     {title:"Página web", url: "https://www.etitc.edu.co/es/",},
   ],
   posts: posts.filter((post) => (post.authorId === "etitc")),
-  researchGroups: ["virtualAprende", "kVant"],  
+  researchGroups: ["virtualAprende", "kVant", "sapientiam", "solidWorks"],  
   nextEvents: ["expo2025"],
   channel: [
     {
       name: "General", items: [
         {name: "Anuncios institucionales"},
-        {name: "Novedades"},            
-        {name: "Chat general"},   
+        {name: "Facultad de sistemas"},            
+        {name: "Facultad de electromecánica"},   
+        {name: "Facultad de procesos industriales"},   
+        {name: "Facultad de mecatrónica"},   
+        {name: "Facultad de mecánica"},   
       ],      
     },
     {

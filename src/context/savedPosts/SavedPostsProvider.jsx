@@ -1,7 +1,7 @@
 import { useState } from "react";
 import posts from "../../data/posts";
 
-import { SavedPostsContext, SavePostsToggleContext, IsSavedPostContext } from "./SavedPostsContext"
+import { SavedPostsContext, SavePostsToggleContext, IsSavedPostContext } from "./SavedPostsContext.js"
 
 
 export function SavedPostsProvider({ children }) {
