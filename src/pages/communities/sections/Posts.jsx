@@ -8,7 +8,7 @@ function Posts () {
   const posts = data.posts
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center gap-5">
       {
         posts.map((post) => (
           <HeadlessPost key={post.id} {...post} />          

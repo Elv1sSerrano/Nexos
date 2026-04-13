@@ -10,7 +10,7 @@ function Carousel ({title, items, Type}) {
     switch (Type) {
       case HeadlessPost:
         return (
-          <div className="flex flex-row gap-2">
+          <div className="grid grid-cols-2 gap-2">
             {items?.map((item, index) => (          
               <Type key={index} {...item}/>
             ))}

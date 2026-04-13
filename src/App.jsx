@@ -27,6 +27,9 @@ import InstitutionPosts from "./pages/institutions/sections/InstitutionsPosts";
 import InstitutionInfo from "./pages/institutions/sections/InstitutionInfo";
 import InstitutionGroups from "./pages/institutions/sections/InstitutionGroups";
 import InstitutionEvents from "./pages/institutions/sections/InstitutionEvents";
+import ProjectDetails from "./pages/communities/components/ProjectDetails";
+import Connections from "./pages/conections/Connections";
+import VinculateForm from "./pages/vinculateForm/VinculateForm";
 
 function AppLayout () {
   return (
@@ -49,6 +52,8 @@ function App () {
         <Route path='/' element={<LandingPage />} />
           <Route path='/app' element={<AppLayout />}>
             <Route path="inicio" element={<Feed />}/>
+            <Route path="conexiones" element={<Connections />}/>
+            <Route path="conexiones/vincularse" element={<VinculateForm />}/>
             <Route path="explorar" element={<Explore />}/>
             <Route path="explorar/:eventoId" element={<Event />}/>            
             <Route path="perfil/:userId" element={<Profile />}>
@@ -71,6 +76,7 @@ function App () {
               <Route path="publicaciones" element={<Posts />}/>
               <Route path="cursos" element={<Courses />}/>
               <Route path="proyectos" element={<Projects />}/>
+              <Route path="proyectos/detalles" element={<ProjectDetails />}/>
               <Route path="videos" element={<Videos />}/>
             </Route>
             <Route path="institucion/:institutionId/canal" element={<Channel />} />

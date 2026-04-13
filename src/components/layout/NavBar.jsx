@@ -23,8 +23,10 @@ function NavBar () {
           <input type="text" name="text" placeholder="Buscar" className="pl-12 border rounded-full p-3 w-[470px] max-sm:w-full outline-none placeholder:font-montserrat"/>
         </div>      
         {/* Iconos finales */}
-        <div className="flex flex-row justify-around gap-6">        
-          <Icon paths={connectionsPath} className={"text-white"} />
+        <div className="flex flex-row justify-around gap-6">  
+          <NavLink to="/app/conexiones">
+            <Icon paths={connectionsPath} className={"text-white"} />
+          </NavLink>                
           <Icon paths={messagesPath} className={"text-white"}/>
           <Icon paths={notificationsPath} className={"text-white"}/>
           <NavLink to="/">

@@ -27,14 +27,14 @@ const HeadlessPost = ({ profilePicture, author, date, body, image, id }) => {
           </div>
         </div>
         {
-          image && (<img src={image} alt={id} className="w-full max-h-[600px] object-cover rounded-md" />) 
+          image && (<img src={image} alt={id} className="w-full max-h-[470px] object-cover rounded-md" />) 
         }        
         <p className="font-inter">{body}</p>
       </div>
       
       {showReactions && (
         <div          
-          className="absolute right-[-50px] top-1/2 -translate-y-1/2 flex flex-col gap-2 bg-white shadow-lg rounded-lg p-2"
+          className="absolute z-40 right-[-50px] top-1/2 -translate-y-1/2 flex flex-col gap-2 bg-white shadow-lg rounded-lg p-2"
         >
           <button onClick={() => likePost(id)}>
             <Icon 
