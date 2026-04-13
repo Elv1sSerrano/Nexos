@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route, Outlet, Navigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
 import LandingPage from "./pages/landing/LandingPage";
 import NavBar from "./components/layout/NavBar";
 import SideBar from './components/layout/SideBar'
@@ -30,6 +32,7 @@ import InstitutionEvents from "./pages/institutions/sections/InstitutionEvents";
 import ProjectDetails from "./pages/communities/components/ProjectDetails";
 import Connections from "./pages/conections/Connections";
 import VinculateForm from "./pages/vinculateForm/VinculateForm";
+import VinculateResearchGroupForm from "./pages/vinculateResearchGroupForm/VinculateResearchGroupForm";
 
 function AppLayout () {
   return (
@@ -48,12 +51,25 @@ function AppLayout () {
 function App () {
   return (
     <BrowserRouter>
+      <ToastContainer 
+        position="top-right" 
+        autoClose={5000} 
+        hideProgressBar={false} 
+        newestOnTop={false} 
+        closeOnClick 
+        rtl={false} 
+        pauseOnFocusLoss 
+        draggable 
+        pauseOnHover 
+        theme="dark"
+      />
       <Routes>
         <Route path='/' element={<LandingPage />} />
           <Route path='/app' element={<AppLayout />}>
             <Route path="inicio" element={<Feed />}/>
             <Route path="conexiones" element={<Connections />}/>
             <Route path="conexiones/vincularse" element={<VinculateForm />}/>
+            <Route path="conexiones/registrar-semillero" element={<VinculateResearchGroupForm />}/>
             <Route path="explorar" element={<Explore />}/>
             <Route path="explorar/:eventoId" element={<Event />}/>            
             <Route path="perfil/:userId" element={<Profile />}>

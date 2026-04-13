@@ -1,5 +1,5 @@
 import { Microscope, User, Users, BriefcaseBusiness, FolderKanban, ShieldCheck } from "lucide-react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { useState } from "react";
 import supabase from "../../utils/supabase-client.js"
 

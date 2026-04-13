@@ -1,43 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { Search, ChevronDown, Users} from "lucide-react";
 import { NavLink } from "react-router-dom";
-import icono_usuario from "../../assets/images/users/icono_usuario.png"
 import supabase from "../../utils/supabase-client";
-
-function StatPill({ label, value }) {
-  return (
-    <div className="rounded-2xl bg-slate-50 px-3 py-2 text-center shadow-sm ring-1 ring-slate-100">
-      <div className="text-[11px] uppercase tracking-wide text-slate-400">{label}</div>
-      <div className="mt-1 text-sm font-semibold text-slate-900">{value}</div>
-    </div>
-  );
-}
-
-function PeopleCard({ person }) {
-  return (
-    <div className="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
-      <div className="flex flex-col items-center text-center">
-        <div className="relative">
-          <img
-            src={icono_usuario}
-            alt={person.name}
-            className="h-24 w-24 rounded-full object-cover ring-4 ring-slate-100"
-          />
-          <div className="absolute bottom-1 right-1 h-4 w-4 rounded-full border-2 border-white bg-emerald-500" />
-        </div>
-
-        <h3 className="mt-4 text-base font-semibold text-slate-900">{person.name}</h3>
-        <p className="mt-1 text-sm text-slate-500">{person.research_group}</p>
-        <p className="mt-1 text-sm font-medium text-purple-600">{person.role}</p>
-
-        <div className="mt-5 grid w-full grid-cols-2 gap-2">
-          <StatPill label="Proyectos" value={person.proyects} />
-          <StatPill label="Partic." value={person.participations} />          
-        </div>                
-      </div>
-    </div>
-  );
-}
+import PeopleCard from "./components/PeopleCard";
 
 export default function Connections() {
   const [query, setQuery] = useState("");
@@ -65,13 +30,13 @@ export default function Connections() {
     return users.filter((item) => {
       if (mode === "personas") {
         return (
-          item.name.toLowerCase().includes(q) ||
-          item.role.toLowerCase().includes(q) ||
-          item.semillero.toLowerCase().includes(q)
+          item.name?.toLowerCase().includes(q) ||
+          item.role?.toLowerCase().includes(q) ||
+          item.semillero?.toLowerCase().includes(q)
         );
       }
 
-      return item.semillero.toLowerCase().includes(q) || item.name.toLowerCase().includes(q);
+      return item.semillero?.toLowerCase().includes(q) || item.name.toLowerCase().includes(q);
     });
   }, [query, mode, users]);
 
@@ -90,6 +55,12 @@ export default function Connections() {
             <NavLink to="vincularse">
               <div className="transition-all duration-300 p-2 border-2 border-purple-700 text-purple-700 rounded-xl hover:bg-purple-700 hover:text-white">
                 Vincularse
+              </div>              
+            </NavLink>
+
+            <NavLink to="registrar-semillero">
+              <div className="transition-all duration-300 p-2 border-2 border-purple-700 text-purple-700 rounded-xl hover:bg-purple-700 hover:text-white">
+                Registrar semillero
               </div>              
             </NavLink>      
 
@@ -126,7 +97,7 @@ export default function Connections() {
         </div>        
 
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {filtered.map((person) => (
+          {users.map((person) => (
             <PeopleCard key={person.id} person={person} />
           ))}
         </div>
