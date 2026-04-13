@@ -33,6 +33,7 @@ import ProjectDetails from "./pages/communities/components/ProjectDetails";
 import Connections from "./pages/conections/Connections";
 import VinculateForm from "./pages/vinculateForm/VinculateForm";
 import VinculateResearchGroupForm from "./pages/vinculateResearchGroupForm/VinculateResearchGroupForm";
+import NotFound from "./pages/404/NotFound";
 
 function AppLayout () {
   return (
@@ -77,6 +78,7 @@ function App () {
               <Route path="resumen" element={<SummarySection />} />
               <Route path="publicaciones" element={<PostSection />} />
               <Route path="recursos" element={<ResourcesSection />} />
+              <Route path="*" element={<NotFound />}/>
             </Route>
             <Route path="guardados" element={<Saved />}/>
             <Route path="ajustes" element={<Settings />}>
@@ -85,6 +87,7 @@ function App () {
               <Route path="perfil" element={<ProfileSettings />}/>
               <Route path="notificaciones" element={<Notifications />}/>
               <Route path="seguridad" element={<Security />}/>
+              <Route path="*" element={<NotFound />}/>
             </Route>
             <Route path="semillero/:semilleroId" element={<Communitie />}>
               <Route path="" element={<Navigate to={"principal"} replace/>} />
@@ -94,6 +97,7 @@ function App () {
               <Route path="proyectos" element={<Projects />}/>
               <Route path="proyectos/detalles" element={<ProjectDetails />}/>
               <Route path="videos" element={<Videos />}/>
+              <Route path="*" element={<NotFound />}/>
             </Route>
             <Route path="institucion/:institutionId/canal" element={<Channel />} />
             <Route path="institucion/:institutionId" element={<Institution />}>
@@ -102,8 +106,11 @@ function App () {
               <Route path="acerca-de" element={<InstitutionInfo />} />
               <Route path="eventos" element={<InstitutionEvents />} />
               <Route path="grupos-de-investigacion" element={<InstitutionGroups />} />
+              <Route path="*" element={<NotFound />}/>
             </Route>
+            <Route path="*" element={<NotFound />}/>
           </Route>
+          <Route path="*" element={<NotFound />}/>
       </Routes>
     </BrowserRouter>
   );
