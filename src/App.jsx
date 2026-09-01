@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter, Routes, Route, Outlet, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css'
@@ -36,12 +37,14 @@ import VinculateResearchGroupForm from "./pages/vinculateResearchGroupForm/Vincu
 import NotFound from "./pages/404/NotFound";
 
 function AppLayout () {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
-    <div className="font-inter min-h-screen bg-[#ececf0]">
-      <NavBar />
-      <div className="flex pt-24">
-        <SideBar />
-        <main className="ml-72 p-8 w-full">
+    <div className="font-inter min-h-screen bg-[#f7f7f8] text-[#1d1c1d]">
+      <NavBar onMenuClick={() => setIsSidebarOpen(true)} />
+      <div className="app-shell">
+        <SideBar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+        <main className="app-content">
           <Outlet />
         </main>
       </div>

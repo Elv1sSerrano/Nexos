@@ -8,7 +8,7 @@ const elvisserrano = {
   name: "Elvis Serrano",
   image: fotoElvis,
   description: "Estudiante ingeniería en sistemas",
-  summary: "Tecnólogo en desarollo de software y tecnólogo en desarrollo publicitario apasionado por javascript y el diseño ux/ui",
+  summary: "Tecnólogo en desarollo de software y tecnólogo en desarrollo publicitario con conocimiento en javascript y el diseño ux/ui",
   interests: ["JavaScript", "Frontend development", "React", "MongoDB", "NodeJs"],
   educations: [
     {major: "Tecnología en desarrollo publicitario", institution: "SENA"},

@@ -1,43 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
-import { Search, Users, Link2, Microscope } from "lucide-react";
+import { Search, Users, Microscope } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import supabase from "../../utils/supabase-client";
 import PeopleCard from "./components/PeopleCard";
 
 function SemilleroCard({ semillero }) {
   return (
-    <div className="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
-      <div className="flex flex-col text-left">
-        <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-50">
-          <Microscope className="h-6 w-6 text-purple-700" />
-        </div>
-
-        <h3 className="text-lg font-semibold text-slate-900">
-          {semillero.name}
-        </h3>
-
-        {semillero.theme && (
-          <p className="mt-1 text-sm font-medium text-purple-600">
-            {semillero.theme}
-          </p>
-        )}
-
-        <p className="mt-3 text-sm leading-6 text-slate-600 line-clamp-3">
-          {semillero.description}
-        </p>
-
-        {semillero.external_link && (
-          <a
-            href={semillero.external_link}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-purple-700 hover:underline"
-          >
-            <Link2 className="h-4 w-4" />
-            Material externo
-          </a>
-        )}
+    <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="flex h-28 items-center justify-center bg-purple-50">
+        {semillero.logo_url ? <img src={semillero.logo_url} alt="" className="h-full w-full object-cover" /> : <Microscope className="h-7 w-7 text-purple-700" />}
       </div>
+      <div className="p-5 text-left"><p className="text-xs font-bold uppercase tracking-wide text-purple-700">{semillero.academic_program}</p><h3 className="mt-2 text-lg font-semibold text-slate-900">{semillero.name}</h3><p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-600">{semillero.description}</p></div>
     </div>
   );
 }
@@ -96,7 +69,7 @@ export default function Connections() {
         group.toLowerCase().includes(q)
       );
     });
-  }, [query, users]);
+  }, [q, users]);
 
   const filteredGroups = useMemo(() => {
     if (!q) return researchGroups;
@@ -104,15 +77,15 @@ export default function Connections() {
     return researchGroups.filter((item) => {
       const name = item.name || "";
       const description = item.description || "";
-      const theme = item.theme || "";
+      const program = item.academic_program || "";
 
       return (
         name.toLowerCase().includes(q) ||
         description.toLowerCase().includes(q) ||
-        theme.toLowerCase().includes(q)
+        program.toLowerCase().includes(q)
       );
     });
-  }, [query, researchGroups]);
+  }, [q, researchGroups]);
 
   const totalResults = filteredUsers.length + filteredGroups.length;
 

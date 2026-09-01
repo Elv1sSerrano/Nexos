@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import Icon from "../../components/ui/Icon";
 import { configurationPath } from "../../constants/iconPaths";
 import { newsCards } from "./constants";
@@ -6,30 +5,34 @@ import NewsCard from "./components/NewsCard";
 import HeadlessPost from "../../components/ui/HeadlessPost";
 import { accountData } from "../../data";
 import fotoElvis from "../../assets/images/users/fotoElvis.jpeg"
+import SemillerosCarousel from "../../components/researchgroups/SemillerosCarousel";
 
 function Feed () {
 
   const posts = accountData.followingAccounts.map((account) => account.posts)  
 
   return (
-    <div>
-      <div className="flex flex-row justify-between w-full">
-        <h1 className="font-montserrat font-bold text-2xl">Novedades</h1>
-        <NavLink>
-          <Icon paths={configurationPath}/>
-        </NavLink>        
+    <div className="mx-auto max-w-7xl">
+      <div className="mb-5 flex items-center justify-between gap-3">
+        <div>
+          <p className="mb-1 text-sm font-medium text-[#616061]">Tu espacio de trabajo</p>
+          <h1 className="font-montserrat text-2xl font-bold tracking-tight sm:text-3xl">Novedades</h1>
+        </div>
+        <button className="grid h-10 w-10 place-items-center rounded-lg border border-[#ddd] bg-white text-[#616061] shadow-sm hover:bg-[#f8f8f8]" aria-label="Configurar novedades">
+          <Icon paths={configurationPath} className="h-5 w-5"/>
+        </button>
       </div>
-      <div className="flex flex-row gap-7 my-6">
+      <div className="-mx-1 mb-7 flex snap-x gap-3 overflow-x-auto px-1 pb-2 sm:gap-4">
         {
           newsCards.map((card, index) => (
             <NewsCard key={index} route={card.route} label={card.label}/>
           ))
         }
       </div>
+      <SemillerosCarousel />
       {/* División para poner las publicaciones y el perfil del usuario en la derecha */}
-      <div className="flex flex-row gap-8 justify-center">
-        {/* Parte de los posts */}
-        <div className="flex flex-col gap-3">
+      <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,680px)_280px] xl:justify-center">
+        <div className="flex min-w-0 flex-col gap-4">
           {
             posts
             .slice()
@@ -41,29 +44,18 @@ function Feed () {
             ))
           }
         </div>
-        {/* Parte del perfil del usuario */}
-        <div className="p-1 w-[400px] h-full flex flex-col gap-3 border-2 rounded-lg bg-white">
-          {/* Información general del usuario */}
-          <div className="flex flex-col items-center">
-            <img className="rounded-full w-[100px] h-[100px] object-cover mb-3 mt-3" src={fotoElvis} />
+        <aside className="surface-card sticky top-20 hidden h-full flex-col gap-4 p-5 xl:flex">
+          <div className="flex flex-col items-center text-center">
+            <img className="mb-3 h-20 w-20 rounded-full object-cover" src={fotoElvis} alt="Elvis Serrano" />
             <h3 className="font-bold">Elvis Serrano</h3>
-            <p className="font-light text-gray-800">Miembro de virtual aprende</p>
+            <p className="mt-1 text-sm text-[#616061]">Miembro de Virtual Aprende</p>
           </div>
-          <hr className="border-t-2 border-gray-300 w-full my-2" />
-          {/* Participacion en proyectos */}
-          <div className="flex flex-col items-center gap-1">
-            <h3 className="font-bold">Participaciones en proyectos</h3>
-            <p className="font-medium text-[30px]">6</p>
+          <hr className="border-[#e6e6e6]" />
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-medium text-[#616061]">Proyectos</span>
+            <span className="text-lg font-bold text-[#1264a3]">6</span>
           </div>
-          {/* Parte de redes sociales */}
-          <div className="flex flex-col gap-2 mt-2">
-            <div className="flex flex-row">              
-              <img src="" />
-              <p></p>
-              <p></p>
-            </div>
-          </div>
-        </div>
+        </aside>
       </div>
     </div>
   );

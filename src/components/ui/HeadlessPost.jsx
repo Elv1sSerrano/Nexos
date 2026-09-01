@@ -16,41 +16,41 @@ const HeadlessPost = ({ profilePicture, author, date, body, image, id }) => {
     <div
       onMouseEnter={() => setShowReactions(true)}
       onMouseLeave={() => setShowReactions(false)}
-      className="relative flex flex-row gap-[1px]"
+      className="relative"
     >
-      <div className="p-1 w-[600px] flex flex-col gap-3 border-2 rounded-lg bg-white">
-        <div className="flex flex-row justify-start items-center">
-          <img className="w-8 object-cover rounded-full mr-2" src={profilePicture} alt="" />
+      <article className="surface-card overflow-hidden">
+        <div className="flex items-center gap-3 p-4 pb-2">
+          <img className="h-10 w-10 shrink-0 rounded-lg object-cover" src={profilePicture} alt="" />
           <div className="flex flex-col">
-            <p className="text-[16px] font-semibold m-0">{author}</p>
-            <p className="text-[12px] font-normal m-0">{date}</p>
+            <p className="text-sm font-bold">{author}</p>
+            <p className="text-xs text-[#616061]">{date}</p>
           </div>
         </div>
         {
-          image && (<img src={image} alt={id} className="w-full max-h-[470px] object-cover rounded-md" />) 
+          image && (<img src={image} alt="" className="mt-2 max-h-[520px] w-full object-cover" />) 
         }        
-        <p className="font-inter">{body}</p>
-      </div>
+        <p className="p-4 pt-3 text-sm leading-6 text-[#2c2d2e] sm:text-base">{body}</p>
+      </article>
       
       {showReactions && (
         <div          
-          className="absolute z-40 right-[-50px] top-1/2 -translate-y-1/2 flex flex-col gap-2 bg-white shadow-lg rounded-lg p-2"
+          className="absolute right-3 top-3 z-20 flex gap-1 rounded-lg border border-[#ddd] bg-white p-1 shadow-lg sm:right-[-3.25rem] sm:top-1/2 sm:flex-col sm:-translate-y-1/2"
         >
           <button onClick={() => likePost(id)}>
             <Icon 
               paths={likedPosts.find((post) => post.id === id) ? likeFilledPath : likePath } 
-              className={likedPosts.find((post) => post.id === id) ? "rounded-full text-blue-500 w-8" : "rounded-full text-black w-8"} />
+              className={likedPosts.find((post) => post.id === id) ? "h-8 w-8 rounded p-1.5 text-[#1264a3]" : "h-8 w-8 rounded p-1.5 text-[#454245] hover:bg-[#f3f3f3]"} />
           </button>
           <button>
-            <Icon paths={commentPath} className={"rounded-full text-black w-8"} />
+            <Icon paths={commentPath} className="h-8 w-8 rounded p-1.5 text-[#454245] hover:bg-[#f3f3f3]" />
           </button>
           <button>
-            <Icon paths={sendPath} className={"rounded-full text-black w-8"} />
+            <Icon paths={sendPath} className="h-8 w-8 rounded p-1.5 text-[#454245] hover:bg-[#f3f3f3]" />
           </button>
           <button onClick={() => savePost(id)}>
             <Icon 
               paths={savedPosts.find((post) => post.id === id) ? savedFilledPath : savedPath} 
-              className={savedPosts.find((post) => post.id === id) ? "rounded-full text-yellow-500 w-8" : "rounded-full text-black w-8"} 
+              className={savedPosts.find((post) => post.id === id) ? "h-8 w-8 rounded p-1.5 text-[#d99c00]" : "h-8 w-8 rounded p-1.5 text-[#454245] hover:bg-[#f3f3f3]"} 
             />
           </button>
         </div>

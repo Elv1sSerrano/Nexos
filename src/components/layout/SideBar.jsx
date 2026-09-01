@@ -3,32 +3,39 @@ import Icon from "../ui/Icon";
 import { sideBarItems, sideBarCommunities, sidebarChannels } from "./constants";
 import { configurationPath } from "../../constants/iconPaths";
 import Account from "../ui/Account";
+import { X } from "lucide-react";
 
-function SideBar () {
+function SideBar ({ isOpen, onClose }) {
   return (
-    <aside className="fixed top-28 left-8 w-52 overflow-auto h-screen">
-      <div className="flex flex-col gap-4"> 
+    <>
+      <button className={`sidebar-backdrop ${isOpen ? "is-visible" : ""}`} onClick={onClose} aria-label="Cerrar menú" />
+      <aside className={`app-sidebar ${isOpen ? "is-open" : ""}`}>
+      <div className="sidebar-title">
+        <span>Espacio de trabajo</span>
+        <button onClick={onClose} className="lg:hidden" aria-label="Cerrar menú"><X size={20} /></button>
+      </div>
+      <div className="flex flex-col gap-1"> 
         {sideBarItems.map((item) => (
-          <NavLink key={item.label} to={`/app/${item.direction}`}            
+          <NavLink key={item.label} to={`/app/${item.direction}`} onClick={onClose}
             className={({ isActive }) => 
-              `flex items-center space-x-3 p-2 transition-colors duration-200 ${
+              `sidebar-link ${
                 isActive 
-                  ? 'bg-gray-100 rounded-lg' 
-                  : 'hover:bg-slate-100'
+                  ? 'is-active' 
+                  : ''
               }`}>          
             {({ isActive }) => (
               <>
                 <Icon 
                   paths={item.icon}                  
                   className={isActive 
-                    ? 'text-purple-700 w-6 h-6 shrink-0'
-                    : 'text-[#303538] w-6 h-6 shrink-0'
+                    ? 'text-white w-5 h-5 shrink-0'
+                    : 'text-[#b7a9bc] w-5 h-5 shrink-0'
                   } 
                 />
                 <p                   
                   className={isActive 
-                    ? 'font-bold text-purple-700 flex-grow min-w-0 truncate'
-                    : 'text-[#303538] flex-grow min-w-0 truncate'
+                    ? 'font-semibold text-white flex-grow min-w-0 truncate'
+                    : 'text-[#eee8ef] flex-grow min-w-0 truncate'
                   }
                 >
                   {item.label}
@@ -39,31 +46,32 @@ function SideBar () {
           ))
         }
       </div>
-      <hr className="border-t-2 border-gray-300 w-full my-4" />
-      <div className="flex flex-row justify-between items-center gap-4 mb-3">
-        <h2 className="text-[#303538] font-semibold font-montserrat">Canales</h2>  
-        <button><Icon className="text-[#303538] w-5 h-5" paths={configurationPath}/></button>
+      <hr className="sidebar-divider" />
+      <div className="sidebar-section-title">
+        <h2>Canales</h2>  
+        <button aria-label="Configurar canales"><Icon className="w-4 h-4" paths={configurationPath}/></button>
       </div>    
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-1">
         {
           sidebarChannels.map((communitie) => (
             <Account key={communitie.label} label={communitie.label} direction={communitie.direction} image={communitie.image} />
           ))
         }
       </div>
-      <hr className="border-t-2 border-gray-300 w-full my-4" />
-      <div className="flex flex-row justify-between items-center gap-4 mb-3">
-        <h2 className="text-[#303538] font-semibold font-montserrat">Comunidades</h2>  
-        <button><Icon className="text-[#303538] w-5 h-5" paths={configurationPath}/></button>
+      <hr className="sidebar-divider" />
+      <div className="sidebar-section-title">
+        <h2>Comunidades</h2>  
+        <button aria-label="Configurar comunidades"><Icon className="w-4 h-4" paths={configurationPath}/></button>
       </div>    
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-1">
         {
           sideBarCommunities.map((communitie) => (
             <Account key={communitie.label} label={communitie.label} direction={communitie.direction} image={communitie.image} />
           ))
         }
       </div>
-    </aside>
+      </aside>
+    </>
   );
 }
 
