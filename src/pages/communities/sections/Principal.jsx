@@ -4,10 +4,13 @@ import Resource from "../../../components/ui/Resource"
 import Event from "../components/Event"
 import SummaryCard from "../components/SummaryCard"
 import { useOutletContext } from "react-router-dom"
+import DynamicSemilleroPrincipal from "../components/DynamicSemilleroPrincipal"
 
 function Principal () {
 
   const data = useOutletContext()
+
+  if (data.isDynamic) return <DynamicSemilleroPrincipal data={data} />
 
   return (
     <div className="flex flex-col gap-3">

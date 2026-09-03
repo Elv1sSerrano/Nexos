@@ -1,10 +1,12 @@
 import HeadlessPost from "../../../components/ui/HeadlessPost";
 import Post from "../../../components/ui/Post";
 import { useOutletContext } from "react-router-dom";
+import EmptyDynamicSection from "../components/EmptyDynamicSection";
 
 function Posts () {
 
   const data = useOutletContext()
+  if (data.isDynamic) return <EmptyDynamicSection label="publicaciones" />;
   const posts = data.posts
 
   return (

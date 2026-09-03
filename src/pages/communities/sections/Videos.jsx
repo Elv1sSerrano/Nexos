@@ -1,9 +1,11 @@
 import { useOutletContext } from "react-router-dom"
 import Video from "../components/Video"
+import EmptyDynamicSection from "../components/EmptyDynamicSection";
 
 function Videos () {
 
   const data = useOutletContext()
+  if (data.isDynamic) return <EmptyDynamicSection label="videos" />;
   const videos = data.videos
 
   return (

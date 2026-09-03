@@ -1,9 +1,11 @@
 import { useOutletContext } from "react-router-dom"
 import Course from "../components/Course"
+import EmptyDynamicSection from "../components/EmptyDynamicSection";
 
 function Courses () {
 
   const data = useOutletContext()
+  if (data.isDynamic) return <EmptyDynamicSection label="cursos" />;
   const courses = data.courses
 
   return (

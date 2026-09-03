@@ -68,7 +68,9 @@ function App () {
         theme="dark"
       />
       <Routes>
-        <Route path='/' element={<LandingPage />} />
+        <Route path="/" element={<AppLayout />}>
+          <Route index element={<Feed />} />
+        </Route>
           <Route path='/app' element={<AppLayout />}>
             <Route path="inicio" element={<Feed />}/>
             <Route path="conexiones" element={<Connections />}/>

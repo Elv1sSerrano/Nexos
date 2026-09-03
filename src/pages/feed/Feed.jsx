@@ -4,7 +4,7 @@ import { newsCards } from "./constants";
 import NewsCard from "./components/NewsCard";
 import HeadlessPost from "../../components/ui/HeadlessPost";
 import { accountData } from "../../data";
-import fotoElvis from "../../assets/images/users/fotoElvis.jpeg"
+// import fotoElvis from "../../assets/images/users/fotoElvis.jpeg"
 import SemillerosCarousel from "../../components/researchgroups/SemillerosCarousel";
 
 function Feed () {
@@ -44,7 +44,7 @@ function Feed () {
             ))
           }
         </div>
-        <aside className="surface-card sticky top-20 hidden h-full flex-col gap-4 p-5 xl:flex">
+        {/* <aside className="surface-card sticky top-20 hidden h-full flex-col gap-4 p-5 xl:flex">
           <div className="flex flex-col items-center text-center">
             <img className="mb-3 h-20 w-20 rounded-full object-cover" src={fotoElvis} alt="Elvis Serrano" />
             <h3 className="font-bold">Elvis Serrano</h3>
@@ -55,7 +55,7 @@ function Feed () {
             <span className="text-sm font-medium text-[#616061]">Proyectos</span>
             <span className="text-lg font-bold text-[#1264a3]">6</span>
           </div>
-        </aside>
+        </aside> */}
       </div>
     </div>
   );

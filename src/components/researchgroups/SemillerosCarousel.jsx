@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import supabase from "../../utils/supabase-client";
 import SemilleroCard from "./SemilleroCard";
 
-const researchGroupColumns = "name,description,academic_program,line_investigation,proyects,leader_name,leader_email,logo_url";
+const researchGroupColumns = "id,name,description,academic_program,line_investigation,proyects,leader_name,leader_email,logo_url";
 
 export default function SemillerosCarousel() {
   const [semilleros, setSemilleros] = useState([]);
@@ -68,7 +68,7 @@ export default function SemillerosCarousel() {
       {status === "ready" && semilleros.length === 0 && <div className="surface-card p-6 text-sm text-[#616061]">Aún no hay semilleros registrados.</div>}
       {status === "ready" && semilleros.length > 0 && (
         <div ref={trackRef} className="-mx-1 flex snap-x gap-4 overflow-x-auto px-1 pb-3" aria-label="Carrusel de semilleros">
-          {semilleros.map((semillero, index) => <SemilleroCard key={`${semillero.name}-${index}`} semillero={semillero} />)}
+          {semilleros.map((semillero) => <SemilleroCard key={semillero.id} semillero={semillero} />)}
         </div>
       )}
     </section>
