@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function Project ({ background, date, projectName, projectDescription, projectPercentage, participants, projectProgressColor }) {
   return (
     <NavLink to={"detalles"}>
-      <div className={`rounded-3xl max-w-96 p-4 shadow-md`} style={{backgroundColor : background}}>      
+      <div className="w-full rounded-2xl p-4 shadow-md" style={{backgroundColor : background}}>      
         <p className="text-sm opacity-60 mb-2.5">{date}</p>
         <h3 className="font-bold text-lg text-center mb-4">{projectName}</h3>
         <p className="text-base opacity-80 mb-5">{projectDescription}</p>
@@ -21,7 +21,7 @@ function Project ({ background, date, projectName, projectDescription, projectPe
         {/* <h3 className="mb-2">Participantes</h3> */}
         <div className="flex flex-row gap-0.5">
           {
-            participants.map((participant) => (
+            participants?.map((participant) => (
               <img key={participant.id} className="w-8 rounded-full" src={participant.picture} alt={participant.name} />
             ))
           }

@@ -3,15 +3,15 @@ import { arrowUpRight } from "../../constants/iconPaths";
 
 function Resource ({image, title, category, description, url}) {
   return (
-    <div>      
-      <div className="overflow-hidden">
+    <article className="h-full">      
+      <div className="overflow-hidden rounded-lg">
         <img
           src={image}
           alt={title}
-          className="h-[240px] w-[420px] object-cover rounded-lg"
+          className="h-44 w-full object-cover sm:h-52"
         />
       </div>      
-      <div className="mt-6">
+      <div className="mt-4">
         <div className="text-gray-900 mb-0.5 hover:text-purple-700 transition duration-300">
           <a href={url} target="_blank" className="flex flex-row gap-2">
             <h3 className="text-lg font-semibold">
@@ -25,7 +25,7 @@ function Resource ({image, title, category, description, url}) {
           {description}
         </p>
       </div>
-    </div>
+    </article>
   )
 }
 

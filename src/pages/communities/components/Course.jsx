@@ -4,12 +4,12 @@ import { heartPath } from "../../../constants/iconPaths";
 
 function Course({ link, image, title, description, author, date, recomendations}) {
   return (
-    <div className="p-4 border-2 bg-white-400">      
-        <div className="flex flex-row gap-3">
-          <img className="w-1/2" src={image} alt={title}/>
+    <article className="h-full rounded-xl border border-[#e3d8f3] bg-white p-4">      
+        <div className="flex flex-col gap-4 sm:flex-row">
+          <img className="h-44 w-full rounded-lg object-cover sm:h-auto sm:w-2/5" src={image} alt={title}/>
           <div className="flex flex-col gap-2 justify-center">
             <a className="hover:text-purple-700 transition duration-300" href={link} target="_blank">
-              <h1 className="font-bold text-2xl">{title}</h1>
+              <h1 className="text-xl font-bold sm:text-2xl">{title}</h1>
             </a>            
             <p className="opacity-85">{description}</p>
             <NavLink className={"hover:text-purple-600 transition-all duration-300"}>
@@ -25,7 +25,7 @@ function Course({ link, image, title, description, author, date, recomendations}
             </div>
           </div>
         </div>      
-    </div>
+    </article>
   )
 }
 

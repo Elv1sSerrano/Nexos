@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router-dom"
 import Project from "../components/Project"
 import EmptyDynamicSection from "../components/EmptyDynamicSection";
+import Carousel from "../../../components/ui/Carousel";
 
 function Projects () {
 
@@ -9,16 +10,7 @@ function Projects () {
   const projects = data.projects
 
   return (
-    <div className="grid grid-cols-2 gap-x-2 gap-y-10">      
-      {
-        projects.map((project) => (
-          <Project key={project.projectName} projectName={project.projectName} background={project.background} date={project.date} 
-          projectDescription={project.projectDescription} projectPercentage={project.projectPercentage}  projectProgressColor={project.projectProgressColor}
-          participants={project.participants}
-          />
-        ))
-      }
-    </div>
+    <Carousel title="Proyectos" items={projects} type={Project} variant="project" />
   )
 }
 

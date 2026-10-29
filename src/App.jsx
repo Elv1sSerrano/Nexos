@@ -20,6 +20,7 @@ import Principal from "./pages/communities/sections/Principal";
 import Courses from "./pages/communities/sections/Courses";
 import Projects from "./pages/communities/sections/Projects";
 import Videos from "./pages/communities/sections/Videos";
+import CommunityEvent from "./pages/communities/sections/CommunityEvent";
 import Event from "./pages/event/Event";
 import SummarySection from "./pages/profile/sections/SummarySection";
 import PostSection from "./pages/profile/sections/PostsSection";
@@ -98,10 +99,12 @@ function App () {
               <Route path="" element={<Navigate to={"principal"} replace/>} />
               <Route path="principal" element={<Principal />}/>
               <Route path="publicaciones" element={<Posts />}/>
+              <Route path="productos" element={<Courses />}/>
               <Route path="cursos" element={<Courses />}/>
               <Route path="proyectos" element={<Projects />}/>
               <Route path="proyectos/detalles" element={<ProjectDetails />}/>
               <Route path="videos" element={<Videos />}/>
+              <Route path="eventos/:eventId" element={<CommunityEvent />}/>
               <Route path="*" element={<NotFound />}/>
             </Route>
             <Route path="institucion/:institutionId/canal" element={<Channel />} />

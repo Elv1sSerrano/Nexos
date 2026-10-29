@@ -9,11 +9,10 @@ function Videos () {
   const videos = data.videos
 
   return (
-    <div className="grid grid-cols-2 gap-4">
-      {videos.map((video) => (
-        <Video key={video.title} image={video.image} title={video.title} date={video.date} author={video.author} />
-      ))}
-    </div>
+    <section className="surface-card p-4 sm:p-6">
+      <div className="mb-5"><p className="text-sm font-semibold text-[#611f69]">Contenido audiovisual</p><h1 className="text-xl font-bold sm:text-2xl">Videos del semillero</h1></div>
+      <div className="space-y-3">{videos.map((video) => <Video key={video.url || video.title} {...video} />)}</div>
+    </section>
   )
 }
 
