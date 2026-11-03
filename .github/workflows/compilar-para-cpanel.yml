@@ -1,0 +1,63 @@
+name: Compilar para cPanel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Archivos que necesita el cPanel
+        run: |
+          # Todas las rutas de la aplicación van a index.html, como hace vercel.json.
+          cat > dist/.htaccess <<'EOF'
+          RewriteEngine On
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteRule ^ index.html [L]
+          EOF
+          # Git Version Control del cPanel copia el contenido de la rama a la carpeta del subdominio.
+          cat > dist/.cpanel.yml <<'EOF'
+          ---
+          deployment:
+            tasks:
+              - export DEPLOYPATH=$HOME/nexos.pedagogiavirtual.com/
+              - /bin/rsync -a --delete --exclude=.git --exclude=.cpanel.yml --exclude=cgi-bin --exclude=php.ini --exclude=.user.ini ./ $DEPLOYPATH
+          EOF
+
+      - name: Publicar en la rama cpanel
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          if git fetch origin cpanel; then
+            git worktree add salida FETCH_HEAD
+            git -C salida checkout -B cpanel
+          else
+            git worktree add --orphan -b cpanel salida
+          fi
+          rsync -a --delete --exclude=.git dist/ salida/
+          cd salida
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Sin cambios en la compilación"
+            exit 0
+          fi
+          git commit -m "Compilación de ${GITHUB_SHA::7}"
+          git push origin cpanel
